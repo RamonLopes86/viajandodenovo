@@ -1,8 +1,63 @@
+'use client'
 import estiloBanner from './banner.module.css';
 import Image from 'next/image';
 import thumb from '../../../public/thumb.jpg'
+import React, {useState, useEffect , useRef} from 'react';
 
 export default function Banner(){
+
+    const iframeRef = useRef(null);  // Referência para o div onde o player será renderizado
+    const playerRef = useRef(null);  // Referência para o player do YouTube
+    const [playerReady, setPlayerReady] = useState(false); // Estado para verificar se o player está pronto
+    const [animaThumb , setAnimaThumb] = useState(false)
+
+    useEffect(() => {
+        
+        // Carregar a API do YouTube
+        const script = document.createElement("script");
+        script.src = "https://www.youtube.com/iframe_api";
+        script.async = true;
+        document.body.appendChild(script);
+
+        // Função chamada pela API do YouTube quando ela estiver carregada
+        window.onYouTubeIframeAPIReady = () => {
+            playerRef.current = new window.YT.Player(iframeRef.current, {
+                height: '390',
+                width: '640',
+                videoId: 'j1vAPFAPGjE',  // ID do vídeo no YouTube
+                events: {
+                    onReady: () => {
+                        setPlayerReady(true); // Marca o player como pronto
+                        
+                    },
+                    onStateChange: (event) => {
+                        
+                    }
+                }
+            });
+        };
+
+        
+        return () => {
+            document.body.removeChild(script);
+        };
+    }, []);
+
+    const togglePlayPause = () => {
+        if (playerRef.current && playerReady) {
+            const currentState = playerRef.current.getPlayerState();
+            if (currentState === window.YT.PlayerState.PLAYING) { // Se o vídeo está tocando
+                playerRef.current.pauseVideo();
+                setAnimaThumb(estiloBanner.imgFrenteOff) // Pausa o vídeo
+            } else {
+                playerRef.current.playVideo()
+                setAnimaThumb(estiloBanner.imgFrenteOn); // Reproduz o vídeo
+            }
+        }
+    };
+
+
+
 
     return(
 
@@ -23,12 +78,16 @@ export default function Banner(){
 
                        <div className={estiloBanner.boxVideo}>
 
-                       <iframe rel='0' className={estiloBanner.iframe} width="100%" height="100%" src="https://www.youtube.com/embed/j1vAPFAPGjE?rel=0?fs=0?controls=0?modestbranding=1?showinfo=0" title='viajando de novo'  >
+                       {/* <iframe  ref={iframeRef } className={estiloBanner.iframe} width="100%" height="100%" src="https://www.youtube.com/embed/j1vAPFAPGjE?rel=0&fs=0&controls=1&modestbranding=1&showinfo=0" title='viajando de novo'  >
                         
-                        </iframe>
+                        </iframe> */}
+
+                        <div ref={iframeRef} className={estiloBanner.iframe}>
+
+                        </div>
 
 
-                        <Image className={estiloBanner.imgFrente} src={thumb}/>
+                        <Image onClick={togglePlayPause} alt='imagem de fundo' className={`${estiloBanner.imgFrente} ${animaThumb}`} src={thumb}/>
 
                        </div>
 
