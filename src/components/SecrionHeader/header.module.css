@@ -8,6 +8,14 @@
     overflow: hidden;
     position: relative;
     flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all 500ms linear;
+    height: 100px;
+    
+    
 
 }
 
@@ -46,9 +54,12 @@
     gap: 20px;
     align-items: center;
     justify-content: center;
-
+    padding: 10px 20px;
+    color: white;
+    
 
 }
+
 
 
 .boxHeader .navTelaMaior ul li{
@@ -62,12 +73,14 @@
     padding: 10px;
     transition: all 500ms linear;
     border-radius: 5px;
-    color: var(--verde);
+    
     font-weight: 500;
-     flex-wrap: wrap;
     
-    
+   
 }
+     
+    
+    
 
 
 .boxHeader button {
@@ -91,8 +104,8 @@
     background-color: var(--verde);
     transition: background-Color 500ms linear;
     color: white;
+    text-decoration: none;
 }
-
 
 
 

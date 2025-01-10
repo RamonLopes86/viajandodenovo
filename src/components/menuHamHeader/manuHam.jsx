@@ -2,10 +2,13 @@
 import estiloManuHam from './menuham.module.css';
 import { IoMdClose } from "react-icons/io";
 import hookContext from '@/hookContext';
+import { FaPlane } from "react-icons/fa";
+import { HiOutlineGlobeEuropeAfrica } from "react-icons/hi2";
 
 export default function MenuHam(){
 
-    const {openNav , setOpenNav} = hookContext()
+    const {openNav , setOpenNav , refMenu} = hookContext()
+
 
 
 
@@ -13,8 +16,15 @@ export default function MenuHam(){
 
     return(
 
-        <section className={`${estiloManuHam.menuHam} ${openNav ? null : estiloManuHam.manuAnimaOff}`}>
+        <section  ref={refMenu} className={`${estiloManuHam.menuHam} ${openNav ? null : estiloManuHam.manuAnimaOff}`}>
 
+            <div className={estiloManuHam.boxAnimaAviao}>
+               <FaPlane className={estiloManuHam.iconAviao}/>
+               
+            </div>
+               
+
+            <HiOutlineGlobeEuropeAfrica className={estiloManuHam.iconGlobe}/>
             <IoMdClose onClick={()=> setOpenNav(atuaal => !atuaal)}  className={estiloManuHam.iconClose}/>
 
             <nav className={estiloManuHam.navTelaMenor}>

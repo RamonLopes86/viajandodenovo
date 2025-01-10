@@ -3,7 +3,7 @@
     position: fixed;
     top: 0;
     right: 0;
-    background-color: var(--verde);
+    background-color: white;
     min-height: 100vh;
     width: 350px;
     border-radius: 8px 0px 0px 8px;
@@ -15,7 +15,7 @@
 .navTelaMenor ul {
 
     padding: 40px 0px;
-    color: white;
+    color: black;
 }
 
 .navTelaMenor ul li{
@@ -27,8 +27,8 @@
 
 .navTelaMenor ul li:hover{
 
-    background-color: white;
-    color: var(--verde);
+    background-color: var(--azul);
+    color: white;
     
 }
 
@@ -39,10 +39,12 @@
     display: inline-block;
     margin: 5px;
     position: absolute;
-    right: 0px;
+    left: 0px;
+    
     cursor: pointer;
     transition: all 200ms linear;
-    color: white;
+    color: var(--azul);
+    top: 20px;
     
 }
 
@@ -64,6 +66,60 @@
     
   
 }
+
+
+.iconAviao{
+
+    width: 35px;
+    height: 35px;
+    margin: 10px 0px;
+    animation: moveAviao  3s linear infinite;
+    transform: translateX(0);
+    color: var(--azul);
+    
+
+}
+
+
+.boxAnimaAviao{
+
+    
+    width: 100%;
+    overflow: hidden;
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 90%);
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    padding: 10px 0px;
+    
+
+}
+
+
+.iconGlobe{
+
+    width: 35px;
+    height: 35px;
+    color: var(--azul);
+    position: absolute;
+    right: 0px;
+    top: 20px;
+}
+
+
+@keyframes moveAviao {
+
+
+    to{
+
+        transform: translateX(400px);
+    }
+    
+
+}
+
+
+
 
 
 .manuAnimaOff{

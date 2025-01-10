@@ -14,6 +14,50 @@ export default function SectionHeader(){
 
     const {setOpenNav} = hookContext()
 
+    const [animaHeader , setAnimaHeader] = useState(false)
+
+    function clickNavOpen(ev){
+
+        ev.stopPropagation()
+
+        setOpenNav(atual=>!atual)
+
+        return;
+
+
+    }
+
+
+    useEffect(()=>{
+
+        const  headerAnimation = () =>{
+
+
+            if(window.scrollY > 0){
+
+                setAnimaHeader(true)
+               
+            }else{
+
+                setAnimaHeader(false)
+            }
+
+
+        }
+
+
+        window.addEventListener('scroll' , headerAnimation)
+
+
+
+        return()=>{
+
+            window.removeEventListener('scroll' , headerAnimation)
+        }
+
+
+    },[])
+
 
     useEffect(()=>{
 
@@ -34,14 +78,15 @@ export default function SectionHeader(){
 
 
 
+
    
 
     return(
 
 
-        <section className={estiloHeader.boxHeader}>
+        <section style={animaHeader ? {backgroundColor:'white' , transition:'all 500ms linear', height:'120px'} : null} className={`${estiloHeader.boxHeader}`}>
 
-                <RxHamburgerMenu onClick={()=> setOpenNav(atual=>!atual)} className={estiloHeader.iconHam}/>
+                <RxHamburgerMenu onClick={clickNavOpen} className={estiloHeader.iconHam}/>
 
     
                 <Image className={estiloHeader.iconLogo} alt='logo da vijando de novo' src={logo}/>
@@ -49,7 +94,7 @@ export default function SectionHeader(){
     
     
                 <nav className={estiloHeader.navTelaMaior}>
-                    <ul>
+                    <ul style={{color: animaHeader ? 'gray' : null}}>
                         <li>Quem somos</li>
                         <li>Produtos</li>
                         <li>E-mail</li>

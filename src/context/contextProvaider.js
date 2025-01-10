@@ -1,17 +1,36 @@
 'use client'
 import { context } from "./context"
-import React , {useState  , useEffect} from "react"
+import React , {useState  , useEffect, useRef} from "react"
 
 
 export default function ContextProvaider({children}){
 
     const [openNav , setOpenNav] = useState(false)
 
+    const refMenu = useRef()
+
+    function clickHiddenMenu({target}){
+
+
+        if(refMenu.current && !refMenu.current.contains(target)){
+
+            setOpenNav(false)
+        }
+    }
+
+
+
+
+    
+
+
 
     const value = {
 
         openNav,
-        setOpenNav
+        setOpenNav,
+        refMenu,
+        clickHiddenMenu
      
 
     }
