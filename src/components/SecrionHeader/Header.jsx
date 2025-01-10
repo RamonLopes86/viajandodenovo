@@ -86,7 +86,7 @@ export default function SectionHeader(){
 
         <section style={animaHeader ? {backgroundColor:'white' , transition:'all 500ms linear', height:'120px'} : null} className={`${estiloHeader.boxHeader}`}>
 
-                <RxHamburgerMenu onClick={clickNavOpen} className={estiloHeader.iconHam}/>
+                <RxHamburgerMenu style={animaHeader ? null : {color:'white'}} onClick={clickNavOpen} className={estiloHeader.iconHam}/>
 
     
                 <Image className={estiloHeader.iconLogo} alt='logo da vijando de novo' src={logo}/>
