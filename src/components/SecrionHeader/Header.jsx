@@ -84,7 +84,7 @@ export default function SectionHeader(){
     return(
 
 
-        <section style={animaHeader ? {backgroundColor:'white' , transition:'all 500ms linear', height:'120px'} : null} className={`${estiloHeader.boxHeader}`}>
+        <section style={animaHeader ? {backgroundColor:'white' , transition:'all 500ms linear', height:'120px' , borderBottom:'2px solid var(--azul)' } : null} className={`${estiloHeader.boxHeader}`}>
 
                 <RxHamburgerMenu style={animaHeader ? null : {color:'white'}} onClick={clickNavOpen} className={estiloHeader.iconHam}/>
 

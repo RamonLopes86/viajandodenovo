@@ -11,9 +11,13 @@
     justify-content: center;
     position: relative;
     min-height: 980px;
-    
-    
+   
 }
+    
+  
+    
+    
+    
 
 .boxBanner::after{
 
@@ -35,10 +39,12 @@
 .boxFilho{
 
     max-width: 1200px;
-    margin: 150px auto;
+    margin: 200px auto;
     text-align: center;
     z-index: 2;
     padding:20px;
+   
+   
     
 }
 
@@ -46,7 +52,7 @@
 .boxFilho h1 {
 
     
-    font-size: 3rem;
+    font-size: 3.2rem;
     font-weight: normal;
     padding: 40px 0px 20px 0px;
     color:white;

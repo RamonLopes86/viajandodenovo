@@ -9,7 +9,7 @@ export default function Banner(){
     const iframeRef = useRef(null);  // Referência para o div onde o player será renderizado
     const playerRef = useRef(null);  // Referência para o player do YouTube
     const [playerReady, setPlayerReady] = useState(false); // Estado para verificar se o player está pronto
-    const [animaThumb , setAnimaThumb] = useState(false)
+    const [animaThumb , setAnimaThumb] = useState(estiloBanner.imgFrenteOn)
 
     useEffect(() => {
         
@@ -47,7 +47,7 @@ export default function Banner(){
         if (playerRef.current && playerReady) {
             const currentState = playerRef.current.getPlayerState();
             if (currentState === window.YT.PlayerState.PLAYING) { // Se o vídeo está tocando
-                playerRef.current.pauseVideo();
+                playerRef.current.pauseVideo()
                 setAnimaThumb(estiloBanner.imgFrenteOff) // Pausa o vídeo
             } else {
                 playerRef.current.playVideo()
