@@ -4,7 +4,7 @@ import SectionHeader from "@/components/SecrionHeader/Header";
 
 export default function Home() {
   return (
-    <div>
+    <div className={styles.main}>
 
         <SectionHeader/>
           

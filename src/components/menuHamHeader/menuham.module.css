@@ -1,0 +1,73 @@
+.menuHam{
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: var(--verde);
+    min-height: 100vh;
+    width: 350px;
+    border-radius: 8px 0px 0px 8px;
+    transition: all 250ms linear;
+    overflow: hidden;
+    
+}
+
+.navTelaMenor ul {
+
+    padding: 40px 0px;
+    color: white;
+}
+
+.navTelaMenor ul li{
+
+    padding: 20px 5px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.navTelaMenor ul li:hover{
+
+    background-color: white;
+    color: var(--verde);
+    
+}
+
+.iconClose{
+
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    margin: 5px;
+    position: absolute;
+    right: 0px;
+    cursor: pointer;
+    transition: all 200ms linear;
+    color: white;
+    
+}
+
+.iconClose:hover{
+
+    color: rgba(201, 23, 23, 0.836);
+    font-weight: normal;
+    transition: all 200ms linear;
+}
+
+
+
+.menuHam  .btnNavLateral{
+
+    width: calc(100% - 40px);
+    margin: 0px 20px;
+    padding: 10px;
+    background-color: var(--azul);
+    
+  
+}
+
+
+.manuAnimaOff{
+
+    width: 0px;
+    transition: all 250ms linear;
+}
