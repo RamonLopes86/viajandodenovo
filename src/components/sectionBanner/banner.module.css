@@ -1,23 +1,60 @@
 .boxBanner{
 
 
-    background-image: url(../../../public/4.jpg);
+    background-image: url(../../../public/3.jpg);
     background-position:center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     position: relative;
     min-height: 980px;
+    overflow: hidden;
    
+    
+   
+}
+
+
+.boxOverFlow{
+
+    
+    width: 100%;
+    position: absolute;
+    top: 25%;
+    max-width: 1500px;
+    margin: 0px auto;
+    overflow: hidden;
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) -50%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 90%);
+    
+   
+
+    
+}
+    
+
+
+.imgPlane{
+
+    animation: movePlane 10s infinite linear;
+   transform: translateX(-100%);
+}
+
+
+@keyframes movePlane {
+
+    to{
+
+        transform: translateX(80vw);
+    }
+
 }
     
   
-    
-    
-    
+  
 
 .boxBanner::after{
 
@@ -27,239 +64,49 @@
     height: 100%;
     position: absolute;
     background-color: white;
-    opacity: 0.1;
+    opacity: 0.2;
 
 }
-    
 
 
 
 
+.boxBanner  h1 {
 
-.boxFilho{
-
-    max-width: 1200px;
-    margin: 200px auto;
     text-align: center;
-    z-index: 2;
-    padding:20px;
-   
-   
-    
-}
-
-
-.boxFilho h1 {
-
-    
-    font-size: 3.2rem;
-    font-weight: normal;
-    padding: 40px 0px 20px 0px;
-    color:white;
-    
-
-}
-
-.boxFilho p {
-
-    font-size: 1.3rem;
     color: white;
-    font-weight:normal;
-    text-align: justify;
-    padding: 20px 0px;
-    line-height: 32px;
-
-    padding: 10px;
-    border-radius: 10px;
-}
-
-
-.boxForm{
-
-    padding: 15px;
-    backdrop-filter: blur(2px);
-    border: 1px solid white;
-    box-shadow: 0px 0px 20px white ,  0px 0px 40px white;
-    border-radius: 10px;
-    margin-top: 80px;
-    color: var(--azul);
-    width: 100%;
-    
-    
-}
-
-
-.boxForm form{
-
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 20px 0px;
-    
-
-}
-
-
-.boxForm h2 {
-
-    width: 100%;
-    padding: 15px 0px 30px 0px;
-   
-}
-
-.boxForm form div{
-
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-   
-}   
-
-.boxFilho form div label{
-
-    font-weight: 600;
-}
-
-
-.boxForm form div button{
-
-    padding: 10px;
-    border: none;
-    position: relative;
-    top: 15px;
-    cursor: pointer;
-    background-color: var(--azul);
-    color: white;
-    font-size: 1.3rem;
-    border-radius: 8px;
-
-
-}
-
-
-
-.boxForm form input{
-
-    width: 100%;
-    padding: 10px 5px;
-    border: none;
-    outline: none;
-    font-size: 1.3rem;
-    color: gray;
-    border-radius: 8px;
-    
-}
-
-.boxVideo{
-
-   
-    position: relative;
-    max-width: 900px;
-    height: 100%;
-    aspect-ratio: 16/9;
-    margin: 40px auto;
+    font-size: 6rem;
     overflow: hidden;
-    text-align: center;
-    
+    max-width: 1800px;
+    margin: 0px auto;
    
 }
 
 
-.iframe{
 
-    border-radius: 10px;
-    border: none;
-    width: 100%;
-    height: 100%;
-    position: absolute;
+    
+   
+    
+    
+
+
+.iconPlane{
+
+    position: fixed;
+    bottom: 10px;
     left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
+   
+    width: 100px;
+    height: 100px;
     
-}
-    
-    
-.imgFrente{
 
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    aspect-ratio: 16/9;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    opacity: 1;
-    z-index: 3;
-    
+  
 }
 
 
-.imgFrenteOn{
-
-    transform:translateY(-100px) ;
-    opacity: 0;
-    transition: all 500ms linear;
-
-}
-
-.imgFrenteOff{
-
-    transform: translateY(0);
-    opacity: 1;
-    transition: all 500ms linear;
-}
-    
 
 
-@media screen and (max-width:1084px) {
 
 
-        .boxFilho{
-
-            margin-top: 100px;
-        }
-
-}
-
-
-@media screen and (max-width:1155px) {
-
-
-    .boxForm{
-
-        max-width: 800px;
-        margin: 0px  auto;
-    }
-
-    .boxForm form{
-
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .boxForm form  div{
-
-        width: 100%;
-
-        & button{
-
-            width: 100%;
-        }
-    }
-
-    
-}
-    
-
-    
 
 

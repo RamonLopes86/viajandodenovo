@@ -6,6 +6,7 @@ import SectionHeader from "@/components/SecrionHeader/Header";
 import hookContext from "@/hookContext";
 import Banner from "@/components/sectionBanner/banner";
 import Produtos from "@/components/sectionProdutos/produtos";
+import QuemSou from "@/components/quemSou/quemSou";
 
 export default function Home() {
 
@@ -16,7 +17,8 @@ export default function Home() {
 
         <SectionHeader/>
         <Banner/>
-        <Produtos/>
+        <QuemSou/>
+        
           
     </div>
   );

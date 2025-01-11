@@ -3,6 +3,7 @@ import { context } from "./context"
 import React , {useState  , useEffect, useRef} from "react"
 
 
+
 export default function ContextProvaider({children}){
 
     const [openNav , setOpenNav] = useState(false)
@@ -19,9 +20,6 @@ export default function ContextProvaider({children}){
     }
 
 
-
-
-    
 
 
 
