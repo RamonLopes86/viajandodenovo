@@ -7,6 +7,7 @@ import hookContext from '@/hookContext';
 import MenuHam from '../menuHamHeader/manuHam';
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useEffect, useState } from 'react';
+import ModalVideo from '../modalVideo/modalVideo';
 
 
 export default function SectionHeader(){
@@ -108,6 +109,9 @@ export default function SectionHeader(){
 
 
                 <MenuHam/>
+
+
+                <ModalVideo/>
          
         </section>
 

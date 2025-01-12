@@ -8,7 +8,14 @@ export default function ContextProvaider({children}){
 
     const [openNav , setOpenNav] = useState(false)
 
+    const [openModalVideo , setOpenModalVideo] =  useState(false)
+
+ 
+
     const refMenu = useRef()
+
+    
+
 
     function clickHiddenMenu({target}){
 
@@ -17,7 +24,15 @@ export default function ContextProvaider({children}){
 
             setOpenNav(false)
         }
+
+
+        
+
     }
+      
+
+
+            
 
 
 
@@ -28,7 +43,11 @@ export default function ContextProvaider({children}){
         openNav,
         setOpenNav,
         refMenu,
-        clickHiddenMenu
+        clickHiddenMenu,
+        openModalVideo,
+        setOpenModalVideo,
+       
+       
      
 
     }

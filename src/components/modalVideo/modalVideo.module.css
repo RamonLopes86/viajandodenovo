@@ -1,16 +1,28 @@
 .boxVideo{
 
    
-    position: relative;
-    max-width: 900px;
-    height: 100%;
-    aspect-ratio: 16/9;
-    margin: 40px auto;
-    overflow: hidden;
+    position: absolute;
+    width: 95%;
+    
+    height: fit-content;
+    aspect-ratio:16/9;
+    max-width: 800px;
+   
     text-align: center;
+    left: 50%;
+    top: 500px;
+    transform: translate(-50% , -50%);
+    z-index: 2;
+    border-radius: 10px;
+    opacity: 1;
+    transition: all 200ms linear;
+    visibility: visible;
     
    
 }
+
+    
+   
 
 
 .iframe{
@@ -24,6 +36,7 @@
     right: 0;
     bottom: 0;
     top: 0;
+
     
 }
     
@@ -58,4 +71,33 @@
     transform: translateY(0);
     opacity: 1;
     transition: all 500ms linear;
+}
+
+
+
+.iconClose{
+
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    z-index: 3;
+    cursor: pointer;
+    width: 25px;
+    height: fit-content;
+    color: white;
+    background-color: rgba(214, 19, 19, 0.932);
+    padding: 4px;
+    border-radius: 50%;
+    font-weight: 700;
+
+}
+
+
+.animaVideoOff{
+
+    visibility: hidden;
+    top: 450px;
+   
+   opacity: 0;
+   transition: all 200ms linear;
 }

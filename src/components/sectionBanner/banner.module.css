@@ -129,6 +129,24 @@
 
 
 
+@media screen and (max-width:900px) {
+
+        .boxBanner{
+
+            min-height: 900px;
+
+        }
+
+        .boxBanner > h1{
+
+            font-size: 10vw;
+            padding: 0px 10px;
+
+        }
+
+}
+
+
 
 
 

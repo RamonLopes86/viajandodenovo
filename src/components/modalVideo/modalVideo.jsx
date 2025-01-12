@@ -3,15 +3,22 @@ import estiloModalVideo from './modalVideo.module.css';
 import React , {useState , useEffect , useRef} from 'react';
 import thumb from '../../../public/thumb.jpg'
 import Image from 'next/image';
+import hookContext from '@/hookContext';
+import { MdOutlineClose } from "react-icons/md";
+
 
 
 
 export default function ModalVideo(){
 
+    const {openModalVideo , setOpenModalVideo} = hookContext()
+
+
     
     const iframeRef = useRef(null);  // Referência para o div onde o player será renderizado
     const playerRef = useRef(null);  // Referência para o player do YouTube
     const [playerReady, setPlayerReady] = useState(false); // Estado para verificar se o player está pronto
+   
     const [animaThumb , setAnimaThumb] = useState(estiloModalVideo.imgFrenteOn)
 
     useEffect(() => {
@@ -62,16 +69,19 @@ export default function ModalVideo(){
 
         return(
 
-            <div className={estiloModalVideo.boxVideo}>
+            <div  className={`${estiloModalVideo.boxVideo} ${openModalVideo ? null : estiloModalVideo.animaVideoOff}`}>
 
                       
 
-            <div ref={iframeRef} className={estiloModalVideo.iframe}>
+                <div ref={iframeRef} className={estiloModalVideo.iframe}>
 
-            </div>
+                </div>
 
 
-            <Image onClick={togglePlayPause} alt='imagem de fundo' className={`${estiloModalVideo.imgFrente} ${animaThumb}`} src={thumb}/>
+                <Image onClick={togglePlayPause} alt='imagem de fundo' className={`${estiloModalVideo.imgFrente} ${animaThumb}`} src={thumb}/>
+
+
+                <MdOutlineClose onClick={()=> setOpenModalVideo(atual=>!atual)} className={estiloModalVideo.iconClose}/>
 
            </div>
 

@@ -22,7 +22,7 @@ export default function Banner() {
             <div className={estiloBanner.boxOverFlow}>
 
                 <div className={estiloBanner.boxAnima}>
-                  <Image className={estiloBanner.iconLogo} src={logo}/> <div className={estiloBanner.linha}></div>  <Image alt='imagem aviao' quality={100} className={estiloBanner.imgPlane} src={plane}/>
+                  <Image alt='imagem da logo' className={estiloBanner.iconLogo} src={logo}/> <div className={estiloBanner.linha}></div>  <Image alt='imagem aviao' quality={100} className={estiloBanner.imgPlane} src={plane}/>
                 </div>
 
             </div>
