@@ -12,12 +12,31 @@ import hookContext from '@/hookContext';
 export default function QuemSou() {
 
 
-    const { setOpenModalVideo } = hookContext()
+    const { setOpenModalVideo , playerRef } = hookContext()
+
+    //   playerRef.current.pauseVideo()
 
 
     const clikOpenVideo = () => {
 
-        return setOpenModalVideo(atual=>!atual) 
+        setOpenModalVideo(
+
+            atual=>{
+
+                if(atual){
+
+                    false
+                    playerRef.current.pauseVideo()
+                    return
+                    
+                }else{
+                   return true
+                }
+
+            }
+
+
+        )
 
     }
 
@@ -42,7 +61,7 @@ export default function QuemSou() {
                         <h1>Tiago Lopes.</h1>
                         <p>Muito prazer, sou CEO da viajando de novo e Já explorei mais de 50 países em cinco continentes, e cada viagem me ensinou que o mundo não é apenas um lugar para conhecer, mas para viver intensamente. Com a Viajando de Novo , minha missão é simples: fazer você viajar mais, gastar menos e transformar sonhos em memórias inesquecíveis. Falei um pouco  <span>sobre isso nesse Podcast  </span></p>
 
-                        <button onClick={() => setOpenModalVideo(atual => !atual)} type='button'>Clique para assistir <GiClick className={estiloQuem.iconMao} /></button>
+                        <button onClick={clikOpenVideo} type='button'>Clique para assistir <GiClick className={estiloQuem.iconMao} /></button>
                     </div>
                 </section>
 
@@ -57,7 +76,7 @@ export default function QuemSou() {
                 <h1>Tiago Lopes.</h1>
                 <p>Muito prazer, sou CEO da viajando de novo e Já explorei mais de 50 países em cinco continentes, e cada viagem me ensinou que o mundo não é apenas um lugar para conhecer, mas para viver intensamente. Com a Viajando de Novo , minha missão é simples: fazer você viajar mais, gastar menos e transformar sonhos em memórias inesquecíveis. Falei um pouco  <span>sobre isso nesse Podcast  </span></p>
 
-                <button onClick={() => setOpenModalVideo(atual => !atual)} type='button'>Clique para assistir <GiClick className={estiloQuem.iconMao} /></button>
+                <button onClick={clikOpenVideo} type='button'>Clique para assistir <GiClick className={estiloQuem.iconMao} /></button>
 
             </section>
 

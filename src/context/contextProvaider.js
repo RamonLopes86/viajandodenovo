@@ -13,7 +13,7 @@ export default function ContextProvaider({children}){
  
 
     const refMenu = useRef()
-
+     const playerRef = useRef(null);  // Referência para o player do YouTube
     
 
 
@@ -46,11 +46,12 @@ export default function ContextProvaider({children}){
         clickHiddenMenu,
         openModalVideo,
         setOpenModalVideo,
+        playerRef
        
+    }
        
      
 
-    }
 
 
     return(

@@ -15,7 +15,7 @@ export default function SectionHeader(){
 
     const {setOpenNav} = hookContext()
 
-    const [animaHeader , setAnimaHeader] = useState(false)
+    const [animaHeader , setAnimaHeader] = useState(null)
 
     function clickNavOpen(ev){
 
@@ -36,11 +36,11 @@ export default function SectionHeader(){
 
             if(window.scrollY > 0){
 
-                setAnimaHeader(true)
+              return  setAnimaHeader(true)
                
             }else{
 
-                setAnimaHeader(false)
+               return setAnimaHeader(false)
             }
 
 
@@ -51,11 +51,11 @@ export default function SectionHeader(){
 
 
 
+        
         return()=>{
 
             window.removeEventListener('scroll' , headerAnimation)
         }
-
 
     },[])
 
@@ -85,7 +85,7 @@ export default function SectionHeader(){
     return(
 
 
-        <section style={animaHeader ? {backgroundColor:'white' , transition:'all 500ms linear', height:'120px' , borderBottom:'2px solid var(--azul)' } : null} className={`${estiloHeader.boxHeader}`}>
+        <section style={animaHeader ? {backgroundColor:'#E0FFFF' , transition:'all 500ms linear', height:'120px' , borderBottom:'2px solid var(--verde)' } : null} className={`${estiloHeader.boxHeader}`}>
 
                 <RxHamburgerMenu style={animaHeader ? null : {color:'white'}} onClick={clickNavOpen} className={estiloHeader.iconHam}/>
 

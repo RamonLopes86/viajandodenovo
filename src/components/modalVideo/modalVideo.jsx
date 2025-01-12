@@ -11,15 +11,40 @@ import { MdOutlineClose } from "react-icons/md";
 
 export default function ModalVideo(){
 
-    const {openModalVideo , setOpenModalVideo} = hookContext()
+    const {openModalVideo , setOpenModalVideo , playerRef} = hookContext()
 
 
     
     const iframeRef = useRef(null);  // Referência para o div onde o player será renderizado
-    const playerRef = useRef(null);  // Referência para o player do YouTube
+   
     const [playerReady, setPlayerReady] = useState(false); // Estado para verificar se o player está pronto
    
     const [animaThumb , setAnimaThumb] = useState(estiloModalVideo.imgFrenteOn)
+
+
+    function clodeModalVideo(){
+
+        setOpenModalVideo(
+
+         
+            atual=>{
+
+                if(atual){
+
+                    false
+                    playerRef.current.pauseVideo()
+                    return
+                    
+                }else{
+                   return true
+                }
+
+            }
+
+        )
+
+    }
+
 
     useEffect(() => {
         
@@ -81,7 +106,7 @@ export default function ModalVideo(){
                 <Image onClick={togglePlayPause} alt='imagem de fundo' className={`${estiloModalVideo.imgFrente} ${animaThumb}`} src={thumb}/>
 
 
-                <MdOutlineClose onClick={()=> setOpenModalVideo(atual=>!atual)} className={estiloModalVideo.iconClose}/>
+                <MdOutlineClose onClick={clodeModalVideo}  className={estiloModalVideo.iconClose}/>
 
            </div>
 
