@@ -3,6 +3,7 @@ import estiloBanner from './banner.module.css';
 import Image from 'next/image';
 import React, { useState, useEffect, useRef } from 'react';
 import plane from '../../../public/plane2.png'
+import logo from '../../../public/logo.png'
 
 
 
@@ -20,7 +21,9 @@ export default function Banner() {
 
             <div className={estiloBanner.boxOverFlow}>
 
-                <Image alt='imagem aviao' quality={100} className={estiloBanner.imgPlane} src={plane}/>
+                <div className={estiloBanner.boxAnima}>
+                  <Image className={estiloBanner.iconLogo} src={logo}/> <div className={estiloBanner.linha}></div>  <Image alt='imagem aviao' quality={100} className={estiloBanner.imgPlane} src={plane}/>
+                </div>
 
             </div>
 

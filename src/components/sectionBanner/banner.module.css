@@ -34,14 +34,38 @@
 
     
 }
+
+.boxAnima{
+
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
     
 
-
-.imgPlane{
-
     animation: movePlane 10s infinite linear;
-   transform: translateX(-100%);
+    transform: translateX(-100%);
 }
+
+.boxAnima .linha{
+
+    width: 120px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.678);
+    position: relative;
+    left: 14px;
+}
+    
+.iconLogo{
+
+    width: 120px;
+    height: fit-content;
+    position: relative;
+    left: 52px;
+}
+
+
 
 
 @keyframes movePlane {
