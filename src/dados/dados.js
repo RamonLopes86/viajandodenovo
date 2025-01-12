@@ -16,7 +16,7 @@ const dados = [
 
        id:1,
        nome:"passagens aereas",
-       img:passagem
+       img:passagens
        
     },
     {

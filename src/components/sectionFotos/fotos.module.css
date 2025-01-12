@@ -1,0 +1,66 @@
+.boxPai{
+
+    min-height: 800px;
+    background-color: var(--verde);
+    align-content: center;
+    text-align: center;
+
+}
+    
+   
+
+
+.boxFilho{
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 20px;
+
+}
+
+
+
+
+.boxFilho:hover > :not(:hover){
+
+    
+    opacity: 0.5;
+  
+}
+    
+    
+
+
+ .boxImagem{
+
+    width: 150px;
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 500ms linear;
+    
+}
+
+.boxImagem:hover{
+
+    width: 700px;
+    transition: all 500ms linear;
+}
+
+
+    
+   
+
+  
+
+
+
+
+
+
+

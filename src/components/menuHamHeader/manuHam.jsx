@@ -4,6 +4,11 @@ import { IoMdClose } from "react-icons/io";
 import hookContext from '@/hookContext';
 import { FaPlane } from "react-icons/fa";
 import { HiOutlineGlobeEuropeAfrica } from "react-icons/hi2";
+import { LuBaggageClaim } from "react-icons/lu";
+import { IoIosMail } from "react-icons/io";
+import { BiSolidPlaneAlt } from "react-icons/bi";
+
+
 
 export default function MenuHam(){
 
@@ -29,9 +34,10 @@ export default function MenuHam(){
 
             <nav className={estiloManuHam.navTelaMenor}>
                 <ul>
-                    <li>Quem somos</li>
-                    <li>Produtos</li>
-                    <li>E-mail</li>
+                    <li>Quem somos <BiSolidPlaneAlt className={estiloManuHam.imgMenu}/> </li>
+                    <li>Produtos <LuBaggageClaim className={estiloManuHam.imgMenu}/>  </li>
+                    <li>E-mail <IoIosMail className={estiloManuHam.imgMenu}/></li>
+
                 </ul>
 
                

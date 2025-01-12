@@ -7,6 +7,7 @@ import hookContext from "@/hookContext";
 import Banner from "@/components/sectionBanner/banner";
 import Produtos from "@/components/sectionProdutos/produtos";
 import QuemSou from "@/components/quemSou/quemSou";
+import Fotos from "@/components/sectionFotos/fotos";
 
 export default function Home() {
 
@@ -16,8 +17,14 @@ export default function Home() {
     <div onClick={clickHiddenMenu} className={styles.main}>
 
         <SectionHeader/>
+
         <Banner/>
+
         <QuemSou/>
+
+        <Produtos/>
+
+        <Fotos/>
         
           
     </div>

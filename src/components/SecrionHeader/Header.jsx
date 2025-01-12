@@ -8,6 +8,11 @@ import MenuHam from '../menuHamHeader/manuHam';
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useEffect, useState } from 'react';
 import ModalVideo from '../modalVideo/modalVideo';
+import { LuBaggageClaim } from "react-icons/lu";
+import { IoIosMail } from "react-icons/io";
+import { BiSolidPlaneAlt } from "react-icons/bi";
+import { FaWhatsapp } from "react-icons/fa6";
+
 
 
 export default function SectionHeader(){
@@ -95,16 +100,16 @@ export default function SectionHeader(){
     
     
                 <nav className={estiloHeader.navTelaMaior}>
-                    <ul style={{color: animaHeader ? 'gray' : null}}>
-                        <li>Quem somos</li>
-                        <li>Produtos</li>
-                        <li>E-mail</li>
+                    <ul style={{color: animaHeader ? 'var(--azul)' : null}}>
+                        <li>Quem somos <LuBaggageClaim className={estiloHeader.imgNavMaior}/> </li>
+                        <li>Produtos <BiSolidPlaneAlt className={estiloHeader.imgNavMaior}/> </li>
+                        <li>E-mail <IoIosMail className={estiloHeader.imgNavMaior}/></li>
     
                     </ul>
                 </nav>
     
     
-                <button type="button">Falar com especialista</button>
+                <button type="button">Falar com especialista <FaWhatsapp className={estiloHeader.imgWpp}/> </button>
 
 
 
