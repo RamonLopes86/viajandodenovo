@@ -16,27 +16,27 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 0px 20px;
+  padding: 80px 20px;
   gap: 5px;
  
 
 }
 
 
+.image{
 
-.boxImagem{
-
-    width: 200px;
+    width: 150px;
     height: 600px;
+    object-fit: cover;
     border-radius: 10px;
-    background-size: cover;
-    background-position: center;
-    
-
 }
 
 
-@media screen  and (max-width:1000px){
+
+
+
+
+@media screen  and (max-width:1124px){
 
 
 
@@ -46,7 +46,7 @@
             
         }
 
-        .boxImagem{
+        .image{
 
             width: 100%;
             height: 150px;

@@ -12,9 +12,9 @@ import bora from '../../../public/4.jpg'
 
 export default function Fotos(){
 
-// const arrayImage = [chile , uruguai , paris , tailandia , montanha , china , bora]
+const arrayImage = [chile , uruguai , paris , tailandia , montanha , china , bora]
 
-const array = ["chile" , "uruguai" , "paris" , "tailandia" , "montanha" , "china" , "4"]
+
     
 
 
@@ -26,13 +26,11 @@ const array = ["chile" , "uruguai" , "paris" , "tailandia" , "montanha" , "china
 
                 {
 
-                    array.map((image , index)=>{
+                    arrayImage.map((image , index)=>{
 
                         return(
 
-                            <div key={index}  style={{ backgroundImage: `url(/${image}.jpg)` }} className={estiloFoto.boxImagem}>
-
-                            </div>
+                            <Image key={index} className={estiloFoto.image} alt='imagens de paisagens' quality={100} src={image}/>
 
                         )
 
