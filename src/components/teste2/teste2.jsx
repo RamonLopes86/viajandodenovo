@@ -4,7 +4,11 @@ import Image from 'next/image';
 import img1 from '../../../public/paris.jpg'
 import img2 from '../../../public/bora.jpg'
 import img3 from '../../../public/tailandia.jpg'
+import img4 from '../../../public/china.jpg'
+import img5 from '../../../public/montanha.jpg'
+
 import { useState } from 'react';
+import { FaArrowCircleRight , FaArrowCircleLeft  } from "react-icons/fa";
 
 
 export default function Teste2() {
@@ -13,26 +17,54 @@ export default function Teste2() {
 
         img1,
         img2,
-        img3
+        img3,
+       
+      
+       
     ])
 
 
 
-    const [anima, setAnima] = useState()
+    const [indexAtivo , setIndexAtivo] = useState(0)
 
 
 
-    function next(param) {
+    function slideImage(param) {
 
 
         if (param === 'next') {
 
-            return setArr(imagens => [...imagens.slice(1), imagens[0]])
+             setArr(imagens => [...imagens.slice(1), imagens[0]])
+
+             setIndexAtivo(indexAtivo=> {
+
+                if(indexAtivo < arr.length - 1){
+
+                   return indexAtivo + 1
+                }
+
+                return 0
+
+             })
+
+             return;
+            
+           
         }
 
         if (param === 'prev') {
 
-            return setArr(imagens => [imagens[imagens.length - 1], ...imagens.slice(0, -1)])
+             setArr(imagens => [imagens[imagens.length - 1], ...imagens.slice(0, - 1)])
+             setIndexAtivo(indexAtivo=>{
+
+                if(indexAtivo === 0){
+
+                    return arr.length - 1
+                }
+
+                return indexAtivo - 1
+
+             })
 
         }
 
@@ -41,71 +73,54 @@ export default function Teste2() {
 
 
 
+    
+
 
     return (
 
         <section className={estilot2.boxContainer}>
 
 
-            {
-
-                arr.map((foto, index) => {
+            <section className={estilot2.conteinerConteudo}>
 
 
-                    return (
+                {
+                    arr.map((foto, index) => {
 
-                        <div className={estilot2.boxImg} key={index}>
+                        return (
 
-                            <Image alt='imagens de paisagens' className={estilot2.img} src={foto} />
-
-
-
-                            <div className={estilot2.boxButton}>
-
-                                <button onClick={() => next('next')} type="button">next</button>
-                                <button onClick={() => next('prev')} type="button">prev</button>
-
-                            </div>
-
-
-                            <section className={estilot2.boxThumb}>
-
-
-                                {
-
-                                    arr.map((foto, index) => {
-
-                                        return (
-
-
-                                            <div key={index} className={estilot2.thumb}>
-
-                                                <Image alt='imagens de paisagens' className={estilot2.imgThumb} src={foto} />
+                            <Image  key={index} alt='imagens de paisagens' className={`${estilot2.img} ${indexAtivo === index ? estilot2.animaOn : estilot2.animaOff}`} src={foto} />
 
 
 
 
-                                            </div>
-                                        )
-
-                                    })
-                                }
+                        )
+                    })
+                }
 
 
-                            </section>
+                <section className={estilot2.boxThumb}>
+                    {
+                        arr.map((foto, index) => {
+                            return (
+                                <div key={index} className={estilot2.thumb}>
+                                    <Image style={index === 0 ? {boxShadow:'0px 0px 20px white'} : null} alt='imagens de paisagens' className={estilot2.imgThumb} src={foto} />
+                                </div>
+                            )
+                        })
+                    }
+                </section>
 
-                        </div>
 
-                    )
-                })
+                <div className={estilot2.boxButton}>
 
-            }
-
-
-
+                    <FaArrowCircleLeft onClick={()=>slideImage('prev')} className={estilot2.iconSeta}/>
+                    <FaArrowCircleRight onClick={()=>slideImage('next')} className={estilot2.iconSeta}/>
+                   
+                </div>
 
 
-
+            </section>
 
 
 
@@ -115,3 +130,8 @@ export default function Teste2() {
 
     )
 }
+
+
+
+
+

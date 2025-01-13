@@ -2,106 +2,98 @@
 
     width: 100%;
     min-height: 800px;
-    overflow: hidden;
+    background-color: var(--verde);
     
-    background-color:#DDFDFE;
-
+ 
 }
 
+.conteinerConteudo{
 
-.boxImg{
-
-
-    
-    
-    
-}
-   
-
-   
-   
-.img{
-
-    width: 50%;
+    width: 60%;
     height: 800px;
-    z-index: 0;
-    position: absolute;
-    object-fit: cover;
-    object-position: center;
-  
-   
-  
-}
-  
-   
+    position: relative;
     
-    
-
-
-
-.boxThumb{
-
-    position: absolute;
-    bottom: 10px;
-    top: 0;
-    right: 10px;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    z-index: 1;
-  
-
-}
-
-
-.thumb{
-
-    width: 100px;
-    height: 200px;
     border-radius: 10px;
     overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
+    
     
 }
+    
 
-.imgThumb{
+.img{
 
     width: 100%;
     height: 100%;
     object-fit: cover;
-
+    position: absolute;
+    
+   
+   
 }
 
+
+.boxThumb{
+
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+
+.imgThumb{
+
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+
+   
+   
+}
 
 .boxButton{
 
     position: absolute;
-    bottom: 40px;
-    left: 10px;
+   top: 10px;
+    right: 10px;
     display: flex;
     flex-direction: row;
+    align-items:center ;
+    justify-content: center;
     gap: 20px;
-    z-index: 2;
-
+   
 }
 
-.boxButton button {
+.boxButton .iconSeta {
 
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    padding: 10px 5px;
-    border: none;
+    width: 35px;
+    height: fit-content;
+    color: white;
     cursor: pointer;
-
+    
 }
+
 
 
 .animaOn{
 
-
-
+    opacity: 1;
+    transform: translateY(0px);
+    transition: all 300ms linear;
+    
 }
+
+
+.animaOff{
+
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: all 300ms linear;
+}
+
+
 

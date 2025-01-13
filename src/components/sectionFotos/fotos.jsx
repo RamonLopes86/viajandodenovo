@@ -22,6 +22,8 @@ const arrayImage = [chile , uruguai , paris , tailandia , montanha , china , bor
 
         <section className={estiloFoto.boxPai}>
 
+            <h1>Lugares</h1>
+
             <section className={estiloFoto.boxFilho}>
 
                 {
@@ -39,6 +41,15 @@ const arrayImage = [chile , uruguai , paris , tailandia , montanha , china , bor
 
 
             </section>
+
+
+
+     
+
+          
+
+
+
 
 
         </section>

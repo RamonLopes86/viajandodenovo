@@ -8,7 +8,8 @@ import Banner from "@/components/sectionBanner/banner";
 import Produtos from "@/components/sectionProdutos/produtos";
 import QuemSou from "@/components/quemSou/quemSou";
 import Fotos from "@/components/sectionFotos/fotos";
-import Teste2 from "@/components/teste2/teste2";
+import Localiza from "@/components/localizacao/localiza";
+import Pagamentos from "@/components/pagamentos/pagamentos";
 
 
 export default function Home() {
@@ -28,7 +29,11 @@ export default function Home() {
 
         <Fotos/>
 
-       <Teste2/>
+        <Localiza/>
+
+        <Pagamentos/>
+
+      
         
           
     </div>

@@ -1,0 +1,37 @@
+.boxIframe{
+
+    
+   background-repeat: no-repeat;
+   background-size: cover;
+    width: 100%;
+   
+}
+   
+
+.boxIframe h1 {
+
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 3rem;
+    color: var(--azul);
+}
+
+
+
+.boxFilho{
+
+    
+    max-width: 1200px;
+    margin: 0px auto;
+    
+    padding: 40px 10px;
+    
+}
+
+.iframe{
+
+   width:100%;
+   border: none;
+   border-radius: 20px;
+}
+
