@@ -17,40 +17,46 @@
   align-items: center;
   justify-content: center;
   padding: 0px 20px;
+  gap: 5px;
+ 
 
 }
 
 
 
+.boxImagem{
 
-.boxFilho:hover > :not(:hover){
-
-    
-    opacity: 0.5;
-  
-}
-    
-    
-
-
- .boxImagem{
-
-    width: 150px;
+    width: 200px;
     height: 600px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     border-radius: 10px;
-    cursor: pointer;
-    transition: all 500ms linear;
+    background-size: cover;
+    background-position: center;
     
+
 }
 
-.boxImagem:hover{
 
-    width: 700px;
-    transition: all 500ms linear;
+@media screen  and (max-width:1000px){
+
+
+
+        .boxFilho{
+
+            flex-direction: column;
+            
+        }
+
+        .boxImagem{
+
+            width: 100%;
+            height: 150px;
+        }
+
 }
+
+
+    
+
 
 
     
