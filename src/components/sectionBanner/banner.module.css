@@ -11,7 +11,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    min-height: 980px;
+    min-height: 990px;
     overflow: hidden;
    
     
@@ -131,11 +131,7 @@
 
 @media screen and (max-width:900px) {
 
-        .boxBanner{
-
-            min-height: 900px;
-
-        }
+        
 
         .boxBanner > h1{
 

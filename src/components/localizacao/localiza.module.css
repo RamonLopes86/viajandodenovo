@@ -25,15 +25,49 @@
     
     max-width: 1200px;
     margin: 0px auto;
-    
     padding: 40px 10px;
+    position: relative;
     
 }
+
+.imgLocal{
+
+    position: absolute;
+    left: 0;
+    top: -2px;
+    width: 80px;
+    height: fit-content;
+    animation: animaLocal 700ms linear infinite alternate ;
+    transform: rotate(-25deg);
+}
+
+
+
+
+@keyframes animaLocal {
+
+        to{
+
+            transform: rotate(-25deg) translateY(-20px)
+        }
+
+}
+    
 
 .iframe{
 
    width:100%;
    border: none;
    border-radius: 20px;
+}
+
+
+@media screen and (max-width:513px) {
+
+    .boxIframe h1 {
+
+        font-size: 11vw;
+    }
+
 }
 

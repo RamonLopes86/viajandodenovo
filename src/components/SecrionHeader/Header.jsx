@@ -12,6 +12,8 @@ import { LuBaggageClaim } from "react-icons/lu";
 import { IoIosMail } from "react-icons/io";
 import { BiSolidPlaneAlt } from "react-icons/bi";
 import { FaWhatsapp } from "react-icons/fa6";
+import { FaLocationDot } from "react-icons/fa6";
+import { RiLandscapeAiLine } from "react-icons/ri";
 import Link from 'next/link';
 
 
@@ -107,7 +109,9 @@ export default function SectionHeader(){
 
     
               
-                    <Image className={estiloHeader.iconLogo} alt='logo da vijando de novo' src={logo}/>
+                    <Link href={'#idbanner'}>
+                        <Image className={estiloHeader.iconLogo} alt='logo da vijando de novo' src={logo}/>
+                    </Link>
                
     
     
@@ -120,8 +124,14 @@ export default function SectionHeader(){
                         <Link style={styleLink} className={estiloHeader.link} href={'#idprodutos'}>
                             <li>Produtos <BiSolidPlaneAlt className={estiloHeader.imgNavMaior}/> </li>
                         </Link>
+                        
                         <Link style={styleLink} className={estiloHeader.link} href={'#'}>
-                            <li>E-mail <IoIosMail className={estiloHeader.imgNavMaior}/></li>
+
+                        <li >Lugares  <RiLandscapeAiLine className={estiloHeader.imgNavMaior}/> </li>
+                        </Link>
+
+                        <Link style={styleLink} className={estiloHeader.link} href={'#'}>
+                            <li>Localização <FaLocationDot className={estiloHeader.imgNavMaior}/></li>
                         </Link>
     
                     </ul>
@@ -136,6 +146,9 @@ export default function SectionHeader(){
 
 
                 <ModalVideo/>
+
+            
+
          
         </section>
 

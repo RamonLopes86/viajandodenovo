@@ -138,6 +138,16 @@ position: absolute;
 }
 
 
+@media screen and (max-width:513px) {
+
+    .boxProdutos h1 {
+
+        font-size: 13vw;
+    }
+
+}
+
+
 @media screen and (max-width:450px) {
 
     .produtos{

@@ -16,7 +16,7 @@ export default function Banner() {
 
     return (
 
-        <section className={estiloBanner.boxBanner}>
+        <section id='idbanner' className={estiloBanner.boxBanner}>
 
 
             <div className={estiloBanner.boxOverFlow}>

@@ -94,6 +94,11 @@
 
 @media screen and (max-width:500px) {
 
+    .boxPai h2 {
+
+        opacity: 7vw;
+    }
+
     .boxPai > p{
 
         font-size: 7vw;

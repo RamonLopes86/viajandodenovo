@@ -3,6 +3,7 @@
     background-image: url(../../../public/__bora.jpg);
     background-position: center;
     background-size: cover;
+   
     
    
 
@@ -26,10 +27,12 @@
 
   
     width: 50%;
-    background-color: #7bc59aa1;
-    
-    
+    background-color:#7bc59aa1;
+   
+
 }
+    
+    
     
  
 
@@ -360,7 +363,8 @@
         border-radius: 5px;
         cursor: pointer;
         font-size: 1.2rem;
-        width: 100%;
+        
+
        }
 
    
@@ -477,6 +481,21 @@
  }
 
 
+ @media screen and (max-width:513px) {
+
+    .boxTxEscondido h1{
+
+        font-size: 12vw;
+        width: 100%;
+        padding: 0px 10px;
+        
+    }
+    
+}
+
+
+
+
  @media screen and (width < 500px) {
 
     .boxRight  > .image{
@@ -527,6 +546,47 @@
         
     
      }
+
+ }
+
+
+ @media screen and (max-width:370px) {
+
+    .boxLeft > .image:nth-of-type(2){
+
+        /* estadio */
+        width: 280px;
+        height: 280px;
+        left: 2px;
+        top: 260px;
+        
+    }
+
+    .boxLeft > .image:nth-of-type(3){
+    
+        /* muro */
+       width: 290px;
+       height: 290px;
+        position: absolute;
+        bottom: 70px;
+        left: 2px;
+        z-index: 2;
+        
+    
+     }
+
+    .boxLeft >  .image:nth-of-type(1){
+    
+        /* toca */
+    
+      width: 300px;
+      height: 300px;
+       
+       position: absolute;
+       top: 45%;
+      left: 2px;
+       z-index: 1;
+    }
 
  }
 
