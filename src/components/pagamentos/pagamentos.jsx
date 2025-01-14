@@ -25,7 +25,7 @@ export default function Pagamentos(){
 
                     <nav className={estiloPag.navQuem}>
 
-                        <h2>Viajando e novo</h2>
+                    <h2>Viajando de novo</h2>
 
                         <ul>
                             <li>Quem Somos <LuBaggageClaim className={estiloPag.icon}/></li>
@@ -37,11 +37,14 @@ export default function Pagamentos(){
 
                 </div>
 
-                <div className={estiloPag.boxPagamentos}>
+                <div className={estiloPag.boxPag}>
+
+                   
 
                     <nav className={estiloPag.navPagamentos}>
 
                         <h2>Formas de pagamento</h2>
+                       
 
                         <ul>
                             <li>Cartão de crédito <FaRegCreditCard className={estiloPag.icon}/></li>
@@ -49,6 +52,7 @@ export default function Pagamentos(){
                             <li>Pix <FaPix className={estiloPag.icon}/></li>
                             <li>Boleto <FaBarcode className={estiloPag.icon}/></li>
                         </ul>
+
                     </nav>
 
                 </div>
