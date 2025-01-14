@@ -8,7 +8,7 @@ export default function Localiza() {
 
     return (
 
-        <section className={estiloLocaliza.boxIframe}>
+        <section id='idlocaliza' className={estiloLocaliza.boxIframe}>
 
             
 

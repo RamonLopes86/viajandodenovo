@@ -33,8 +33,11 @@ export default function MenuHam() {
 
             <HiOutlineGlobeEuropeAfrica className={estiloManuHam.iconGlobe} />
             <IoMdClose onClick={() => setOpenNav(atuaal => !atuaal)} className={estiloManuHam.iconClose} />
-
+        
             <nav className={estiloManuHam.navTelaMenor}>
+
+
+
                 <ul>
                     <Link href={'#idquem'}>
                         <li>Quem somos <BiSolidPlaneAlt className={estiloManuHam.imgMenu} /> </li>
@@ -45,11 +48,11 @@ export default function MenuHam() {
                     </Link>
 
 
-                    <Link  className={estiloManuHam.link} href={'#'}>
+                    <Link  className={estiloManuHam.link} href={'#idfotos'}>
 
                         <li >Lugares  <RiLandscapeAiLine className={estiloManuHam.imgMenu} /> </li>
                     </Link>
-                    <Link className={estiloManuHam.link} href={'#'}>
+                    <Link className={estiloManuHam.link} href={'#idlocaliza'}>
                         <li>Localização <FaLocationDot className={estiloManuHam.imgMenu} /></li>
                     </Link>
 

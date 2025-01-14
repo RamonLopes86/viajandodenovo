@@ -20,7 +20,7 @@ const arrayImage = [chile , uruguai , paris , tailandia , montanha , china , bor
 
     return(
 
-        <section className={estiloFoto.boxPai}>
+        <section id='idfotos' className={estiloFoto.boxPai}>
 
             <h1>Lugares</h1>
 

@@ -1,6 +1,6 @@
 'use client'
 import estiloProd from './produtos.module.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect , useRef } from 'react';
 import dados from '@/dados/dados';
 import Image from 'next/image';
 
@@ -10,6 +10,39 @@ import Image from 'next/image';
 
 export default function Produtos() {
 
+    const [animaProd , setAnimaProd] = useState(null)
+
+    const refProd = useRef()
+
+
+
+    useEffect(()=>{
+
+
+        const myObserver = new IntersectionObserver((elemento)=>{
+
+
+            elemento.forEach((el)=>{
+
+                el.isIntersecting ? setAnimaProd(true) : setAnimaProd(false)
+
+            })
+
+        })
+
+
+
+        myObserver.observe(refProd.current)
+
+
+        return ()=>{
+
+            myObserver.unobserve(refProd.current)
+
+        }
+
+    },[])
+
 
     return (
 
@@ -18,7 +51,7 @@ export default function Produtos() {
             <h1>Produtos</h1>
 
 
-            <section className={estiloProd.produtos}>
+            <section ref={refProd} className={`${estiloProd.produtos} ${animaProd ? estiloProd.animaOn : estiloProd.animaOff}`}>
 
                 {
 

@@ -39,9 +39,11 @@
     padding: 40px 20px;
     
     z-index: 2;
+
+    
+}
     
 
-}
 
 .boxProdutos::after{
 
@@ -103,6 +105,27 @@ position: absolute;
 .card:hover > .img{
 
     animation: moveImg 400ms linear infinite alternate;
+
+}
+
+
+/* intersection anima */
+
+
+.animaOn{
+
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    transition: all 600ms linear;
+}
+
+.animaOff{
+
+    transform: translateY(100px);
+    visibility: hidden;
+    opacity: 0;
+    transition: none;
 
 }
 

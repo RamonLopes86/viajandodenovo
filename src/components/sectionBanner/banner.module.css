@@ -15,8 +15,10 @@
     overflow: hidden;
    
     
-   
 }
+
+
+   
 
 
 .boxOverFlow{
@@ -29,7 +31,7 @@
     margin: 0px auto;
     overflow: hidden;
     mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) -50%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 90%);
-    
+   
    
 
     
@@ -46,6 +48,8 @@
 
     animation: movePlane 10s infinite linear;
     transform: translateX(-100%);
+
+    
 }
 
 .boxAnima .linha{
@@ -64,6 +68,11 @@
     position: relative;
     left: 52px;
 }
+
+
+
+
+
 
 
 
@@ -108,10 +117,6 @@
 
 
 
-    
-   
-    
-    
 
 
 .iconPlane{
@@ -127,6 +132,23 @@
   
 }
 
+
+
+.animaOn{
+
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    transition: all 700ms linear;
+}
+
+.animaOff{
+
+    transform: translateX(-100px);
+    opacity: 0;
+    visibility: hidden;
+    transition: none;
+}
 
 
 @media screen and (max-width:900px) {

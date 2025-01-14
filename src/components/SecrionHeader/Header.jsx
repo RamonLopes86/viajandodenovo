@@ -103,54 +103,43 @@ export default function SectionHeader(){
     return(
 
 
-        <section style={animaHeader ? {backgroundColor:'#E0FFFF' , transition:'all 500ms linear', height:'120px' , borderBottom:'2px solid var(--verde)'  } : null} className={`${estiloHeader.boxHeader}`}>
-
-                <RxHamburgerMenu style={animaHeader ? null : {color:'white'}} onClick={clickNavOpen} className={estiloHeader.iconHam}/>
-
-    
-              
-                    <Link href={'#idbanner'}>
-                        <Image className={estiloHeader.iconLogo} alt='logo da vijando de novo' src={logo}/>
-                    </Link>
-               
-    
-    
-    
-                <nav className={estiloHeader.navTelaMaior}>
-                    <ul style={{color: animaHeader ? 'var(--azul)' : null}}>
-                        <Link style={styleLink} className={estiloHeader.link} href={'#idquem'}>
-                            <li>Quem somos <LuBaggageClaim className={estiloHeader.imgNavMaior}/> </li>
-                        </Link>
-                        <Link style={styleLink} className={estiloHeader.link} href={'#idprodutos'}>
-                            <li>Produtos <BiSolidPlaneAlt className={estiloHeader.imgNavMaior}/> </li>
-                        </Link>
-                        
-                        <Link style={styleLink} className={estiloHeader.link} href={'#'}>
-
-                        <li >Lugares  <RiLandscapeAiLine className={estiloHeader.imgNavMaior}/> </li>
-                        </Link>
-
-                        <Link style={styleLink} className={estiloHeader.link} href={'#'}>
-                            <li>Localização <FaLocationDot className={estiloHeader.imgNavMaior}/></li>
-                        </Link>
-    
-                    </ul>
-                </nav>
-    
-    
-                <button type="button">Falar com especialista <FaWhatsapp className={estiloHeader.imgWpp}/> </button>
+     
 
 
-
-                <MenuHam/>
-
-
-                <ModalVideo/>
-
+            <section style={animaHeader ? {backgroundColor:'#E0FFFF' , transition:'all 500ms linear', height:'120px' , borderBottom:'2px solid var(--verde)'  } : null} className={`${estiloHeader.boxHeader}`}>
+                    <RxHamburgerMenu style={animaHeader ? null : {color:'white'}} onClick={clickNavOpen} className={estiloHeader.iconHam}/>
             
+                        <Link href={'#idbanner'}>
+                            <Image className={estiloHeader.iconLogo} alt='logo da vijando de novo' src={logo}/>
+                        </Link>
+            
+                    <nav className={estiloHeader.navTelaMaior}>
+                        <ul style={{color: animaHeader ? 'var(--azul)' : null}}>
+                            <Link style={styleLink} className={estiloHeader.link} href={'#idquem'}>
+                                <li>Quem somos <LuBaggageClaim className={estiloHeader.imgNavMaior}/> </li>
+                            </Link>
+                            <Link style={styleLink} className={estiloHeader.link} href={'#idprodutos'}>
+                                <li>Produtos <BiSolidPlaneAlt className={estiloHeader.imgNavMaior}/> </li>
+                            </Link>
+            
+                            <Link style={styleLink} className={estiloHeader.link} href={'#idfotos'}>
+                            <li >Lugares  <RiLandscapeAiLine className={estiloHeader.imgNavMaior}/> </li>
+                            </Link>
+                            <Link style={styleLink} className={estiloHeader.link} href={'#idlocaliza'}>
+                                <li>Localização <FaLocationDot className={estiloHeader.imgNavMaior}/></li>
+                            </Link>
+                        </ul>
+                    </nav>
+                    <button type="button">Falar com especialista <FaWhatsapp className={estiloHeader.imgWpp}/> </button>
+                    <MenuHam/>
+                    <ModalVideo/>
+            
+            </section>
 
-         
-        </section>
+
+        
+            
+      
 
 
 

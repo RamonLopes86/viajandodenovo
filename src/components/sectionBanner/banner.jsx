@@ -6,10 +6,41 @@ import plane from '../../../public/plane2.png'
 import logo from '../../../public/logo.png'
 
 
-
-
-
 export default function Banner() {
+
+
+    const boxRef = useRef()
+
+    const [animaTit , setAnimaTit] = useState(false)
+
+
+
+    useEffect(()=>{
+
+        const myObserver = new IntersectionObserver((el)=>{
+
+            el.forEach((item)=>{
+
+                if(item.isIntersecting){
+
+                    setAnimaTit(true)
+
+                }else{
+
+                    setAnimaTit(false)
+                }
+
+            })
+
+
+        })
+
+        
+
+
+        myObserver.observe(boxRef.current)
+
+    },[])
 
 
 
@@ -19,9 +50,9 @@ export default function Banner() {
         <section id='idbanner' className={estiloBanner.boxBanner}>
 
 
-            <div className={estiloBanner.boxOverFlow}>
+            <div   className={`${estiloBanner.boxOverFlow} `}>
 
-                <div className={estiloBanner.boxAnima}>
+                <div className={`${estiloBanner.boxAnima} `}>
                   <Image alt='imagem da logo' className={estiloBanner.iconLogo} src={logo}/> <div className={estiloBanner.linha}></div>  <Image alt='imagem aviao' quality={100} className={estiloBanner.imgPlane} src={plane}/>
                 </div>
 
@@ -29,7 +60,7 @@ export default function Banner() {
 
            
 
-                <h1>Viajar nunca foi tão fácil, seguro e divertido </h1>
+                <h1 className={animaTit ? estiloBanner.animaOn : estiloBanner.animaOff}  ref={boxRef}>Viajar nunca foi tão fácil, seguro e divertido </h1>
            
 
 

@@ -3,11 +3,12 @@
     background-image: url(../../../public/__bora.jpg);
     background-position: center;
     background-size: cover;
+    overflow: hidden;
    
+}
     
    
 
-}
 
 
 .boxPai{
@@ -127,6 +128,7 @@
     left: 120px;
     z-index: 2;
     padding: 10px 20px;
+    
 
  }
 
@@ -227,6 +229,64 @@
     }
 
  }
+
+
+ /* anima intersection */
+
+ .animaPriOn{
+
+    transform: translateX(0);
+    transition: all 600ms linear;
+    opacity: 1;
+    visibility: visible;
+ }
+
+ .animaPriOff{
+
+    transform: translateX(-250px);
+    transition: none;
+    opacity: 0;
+    visibility:hidden;
+
+ }
+
+
+ .animaSegOn{
+
+    transform: translateX(0);
+    transition: all 600ms linear;
+    opacity: 1;
+    visibility: visible;
+
+ }
+
+
+ .animaSegOff{
+
+    transform: translateX(250px);
+    transition: none;
+    opacity: 0;
+    visibility:hidden;
+
+ }
+
+
+ .animaTxOn{
+
+    transform: scale(1) translate(0);
+    opacity: 1;
+    transition: all 600ms linear;
+
+}
+
+.animaTxOff{
+
+    transform: scale(0) translate(500px);
+    opacity: 0;
+    transition: none;
+
+}
+    
 
 
 
@@ -417,13 +477,13 @@
         left: 12%;
         z-index: 2;
         
+    }
     
-     }
 
+}
      
 
 
- }
 
 
 
