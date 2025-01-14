@@ -9,6 +9,7 @@
   list-style-type: none;
   font-family: var(--mon);
   font-weight: normal;
+  scroll-behavior: smooth;
 
 }
 
@@ -21,4 +22,11 @@
  --verde:#0197B2;
  --azul:#004AAA;
 
+}
+
+
+a{
+
+  color: black;
+  text-decoration: none;
 }

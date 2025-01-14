@@ -13,7 +13,7 @@ export default function Produtos() {
 
     return (
 
-        <section className={estiloProd.boxProdutos}>
+        <section id='idprodutos' className={estiloProd.boxProdutos}>
 
             <h1>Produtos</h1>
 

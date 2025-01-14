@@ -43,7 +43,7 @@ export default function QuemSou() {
 
     return (
 
-        <section className={estiloQuem.boxMaior}>
+        <section  id='idquem'  className={estiloQuem.boxMaior}>
 
 
 

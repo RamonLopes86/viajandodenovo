@@ -4,15 +4,17 @@
    background-repeat: no-repeat;
    background-size: cover;
     width: 100%;
+    min-height: 800px;
    
 }
    
 
 .boxIframe h1 {
 
+    padding: 60px 10px;
+    font-size: 4rem;
+    color: white;
     text-align: center;
-    padding: 20px 10px;
-    font-size: 3rem;
     color: var(--azul);
 }
 

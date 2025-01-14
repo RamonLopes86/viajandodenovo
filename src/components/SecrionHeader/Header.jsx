@@ -12,15 +12,26 @@ import { LuBaggageClaim } from "react-icons/lu";
 import { IoIosMail } from "react-icons/io";
 import { BiSolidPlaneAlt } from "react-icons/bi";
 import { FaWhatsapp } from "react-icons/fa6";
+import Link from 'next/link';
 
 
 
 export default function SectionHeader(){
 
 
+  
+
     const {setOpenNav} = hookContext()
 
     const [animaHeader , setAnimaHeader] = useState(null)
+
+
+    const styleLink = {
+
+        color:animaHeader ? 'var(--azul)' : null
+
+    }
+
 
     function clickNavOpen(ev){
 
@@ -95,15 +106,23 @@ export default function SectionHeader(){
                 <RxHamburgerMenu style={animaHeader ? null : {color:'white'}} onClick={clickNavOpen} className={estiloHeader.iconHam}/>
 
     
-                <Image className={estiloHeader.iconLogo} alt='logo da vijando de novo' src={logo}/>
+              
+                    <Image className={estiloHeader.iconLogo} alt='logo da vijando de novo' src={logo}/>
+               
     
     
     
                 <nav className={estiloHeader.navTelaMaior}>
                     <ul style={{color: animaHeader ? 'var(--azul)' : null}}>
-                        <li>Quem somos <LuBaggageClaim className={estiloHeader.imgNavMaior}/> </li>
-                        <li>Produtos <BiSolidPlaneAlt className={estiloHeader.imgNavMaior}/> </li>
-                        <li>E-mail <IoIosMail className={estiloHeader.imgNavMaior}/></li>
+                        <Link style={styleLink} className={estiloHeader.link} href={'#idquem'}>
+                            <li>Quem somos <LuBaggageClaim className={estiloHeader.imgNavMaior}/> </li>
+                        </Link>
+                        <Link style={styleLink} className={estiloHeader.link} href={'#idprodutos'}>
+                            <li>Produtos <BiSolidPlaneAlt className={estiloHeader.imgNavMaior}/> </li>
+                        </Link>
+                        <Link style={styleLink} className={estiloHeader.link} href={'#'}>
+                            <li>E-mail <IoIosMail className={estiloHeader.imgNavMaior}/></li>
+                        </Link>
     
                     </ul>
                 </nav>

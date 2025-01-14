@@ -120,8 +120,8 @@
 
     position: absolute;
     max-width: 600px;
-    bottom: 0px;
-    left: 100px;
+    top: 10px;
+    left: 120px;
     z-index: 2;
     padding: 10px 20px;
 
@@ -131,7 +131,7 @@
 
     font-size: 3rem;
     border-bottom: 2px solid  rgba(255, 255, 255, 0.781);
-    width: 700px;
+    width: 650px;
     text-align: left;
     color:  rgb(255, 255, 255);
  }
@@ -152,6 +152,7 @@
     padding: 10px 0px;
     color: rgba(255, 255, 255, 0.904);
     font-weight: 300;
+    color: var(--azul);
     
 
 }
