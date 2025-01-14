@@ -53,6 +53,25 @@
     border-radius: 10px;
 }
 
+.boxPai > p {
+
+    font-size: 2rem;
+    text-align: center;
+    width: 100%;
+    padding: 40px 10px;
+    color: white;
+    max-width: 1500px;
+    margin: 0px auto;
+   letter-spacing: 2px;
+
+}
+
+.boxPai > p span {
+
+    font-weight: bold;
+
+}
+
 
 @media screen  and (max-width:1124px){
 
@@ -69,6 +88,18 @@
             max-width: 100%;
             height: 150px;
         }
+
+}
+
+
+@media screen and (max-width:500px) {
+
+    .boxPai > p{
+
+        font-size: 7vw;
+        letter-spacing: 0;
+        text-align: center;
+    }
 
 }
 

@@ -24,6 +24,8 @@ const arrayImage = [chile , uruguai , paris , tailandia , montanha , china , bor
 
             <h1>Lugares</h1>
 
+            <h2>Uma bela experiência com conforto e segurança para você e sua família.</h2>
+
             <section className={estiloFoto.boxFilho}>
 
                 {
@@ -45,8 +47,8 @@ const arrayImage = [chile , uruguai , paris , tailandia , montanha , china , bor
 
 
      
-
-          
+                <p>Capture momentos únicos que só  a <span>viajando de novo </span> com seus benefícios exclúsivos e estratégias unicas pode oferecer.</p>
+                
 
 
 
