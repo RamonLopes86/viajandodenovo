@@ -11,6 +11,7 @@ import Fotos from "@/components/sectionFotos/fotos";
 import Localiza from "@/components/localizacao/localiza";
 import Pagamentos from "@/components/pagamentos/pagamentos";
 import Footer from "@/components/footer/footer";
+import BotaoWpp from "@/components/botaoWpp/botaoWpp";
 
 
 export default function Home() {
@@ -36,9 +37,11 @@ export default function Home() {
 
         <Footer/>
 
+        <BotaoWpp/>
+
       
+    </div>
         
           
-    </div>
   );
 }

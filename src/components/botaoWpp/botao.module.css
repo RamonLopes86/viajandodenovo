@@ -1,0 +1,135 @@
+
+/*
+.boxBtn{
+
+   background-color:#25D366;
+   width: 60px;
+   height: 60px;
+   border-radius: 50%;
+   padding: 10px; 
+   position: fixed;
+    bottom: 10px;
+    right: 10px;
+    justify-content: center;
+    
+}
+   
+
+.boxBtn::after{
+
+    content: '';
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    height: 75px;
+    background-color: #25D366;
+    position: absolute;
+    left: -8px;
+    bottom: -10px;
+    z-index: -1;
+    border-radius: 50%;
+   
+    animation: pulse 1s  infinite ease-in-out;
+
+}
+
+
+@keyframes pulse {
+
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.3;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+}
+
+
+.imgWpp{
+
+    width: 65px;
+    height: fit-content;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    
+
+}
+
+*/
+
+/* .boxBtn - contêiner do botão */
+.boxBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    display: inline-block;
+  }
+
+  .boxBtn > p {
+
+        color: white;
+        background-color: rgba(255, 0, 0, 0.774);
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        align-content: center;
+        text-align: center;
+        position: absolute;
+        top: -5px;
+        right: 0;
+        z-index: 2;
+  }
+  
+  /* .imgWpp - estilo para a imagem */
+  .imgWpp {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Efeito de pulsação (pseudo-elemento) */
+  .boxBtn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background: #25D366; /* cor da luz pulsante */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulsar 1.5s infinite ease-in-out reverse;
+    z-index: 0;
+  }
+  
+  /* Animação de pulsação */
+  @keyframes pulsar {
+    0% {
+      transform: translate(-50%, -50%) scale(0.6);
+      opacity: 0.5;
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(0.7);
+      opacity: 0.2;
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(0.6);
+      opacity: 0.5;
+    }
+  }
+  
+
