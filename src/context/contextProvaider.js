@@ -10,13 +10,15 @@ export default function ContextProvaider({children}){
 
     const [openModalVideo , setOpenModalVideo] =  useState(false)
 
+    const [openModalVideoMenor , setOpenModalVideoMenor] = useState(false)
+
  
-
     const refMenu = useRef()
+
+
      const playerRef = useRef(null);  // Referência para o player do YouTube
+
     
-
-
     function clickHiddenMenu({target}){
 
 
@@ -26,16 +28,13 @@ export default function ContextProvaider({children}){
         }
 
 
+    }
         
 
-    }
       
 
 
-            
-
-
-
+        
 
 
     const value = {
@@ -46,7 +45,9 @@ export default function ContextProvaider({children}){
         clickHiddenMenu,
         openModalVideo,
         setOpenModalVideo,
-        playerRef
+        playerRef,
+        openModalVideoMenor,
+        setOpenModalVideoMenor
        
     }
        

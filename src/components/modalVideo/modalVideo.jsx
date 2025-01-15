@@ -1,6 +1,6 @@
 'use client'
 import estiloModalVideo from './modalVideo.module.css';
-import React , {useState , useEffect , useRef} from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import thumb from '../../../public/thumb.jpg'
 import Image from 'next/image';
 import hookContext from '@/hookContext';
@@ -8,35 +8,34 @@ import { MdOutlineClose } from "react-icons/md";
 
 
 
+export default function ModalVideo() {
 
-export default function ModalVideo(){
-
-    const {openModalVideo , setOpenModalVideo , playerRef} = hookContext()
+    const { openModalVideo, setOpenModalVideo, playerRef } = hookContext()
 
 
-    
+
     const iframeRef = useRef(null);  // Referência para o div onde o player será renderizado
-   
+
     const [playerReady, setPlayerReady] = useState(false); // Estado para verificar se o player está pronto
-   
-    const [animaThumb , setAnimaThumb] = useState(estiloModalVideo.imgFrenteOn)
+
+    const [animaThumb, setAnimaThumb] = useState(estiloModalVideo.imgFrenteOn) 
 
 
-    function closeModalVideo(){
+    function closeModalVideo() {
 
         setOpenModalVideo(
 
-         
-            atual=>{
+            atual => {
 
-                if(atual){
+                if (atual) {
 
                     false
                     playerRef.current.pauseVideo()
                     return
-                    
-                }else{
-                   return true
+
+                } else {
+
+                    return true
                 }
 
             }
@@ -46,8 +45,9 @@ export default function ModalVideo(){
     }
 
 
+
     useEffect(() => {
-        
+
         // Carregar a API do YouTube
         const script = document.createElement("script");
         script.src = "https://www.youtube.com/iframe_api";
@@ -63,16 +63,16 @@ export default function ModalVideo(){
                 events: {
                     onReady: () => {
                         setPlayerReady(true); // Marca o player como pronto
-                        
+
                     },
                     onStateChange: (event) => {
-                        
+
                     }
                 }
             });
         };
 
-        
+
         return () => {
 
             document.body.removeChild(script);
@@ -93,32 +93,35 @@ export default function ModalVideo(){
         }
     };
 
-        return(
-
-        
-
-
-                <section>
-
-                    <div  className={`${estiloModalVideo.boxVideo} ${openModalVideo ? null : estiloModalVideo.animaVideoOff}`}>
-                    
-                        <div ref={iframeRef} className={estiloModalVideo.iframe}>
-                        </div>
-                        <Image onClick={togglePlayPause} alt='imagem de fundo' className={`${estiloModalVideo.imgFrente} ${animaThumb}`} src={thumb}/>
-                        <MdOutlineClose onClick={closeModalVideo}  className={estiloModalVideo.iconClose}/>
-                    
-                    </div>
+    return (
 
 
 
-                </section>
+
+  
+
+            <div className={`${estiloModalVideo.boxVideo} ${openModalVideo ? null : estiloModalVideo.animaVideoOff}`}>
+
+                <div ref={iframeRef} className={estiloModalVideo.iframe}>
+                </div>
+                <Image onClick={togglePlayPause} alt='imagem de fundo' className={`${estiloModalVideo.imgFrente} ${animaThumb}`} src={thumb} />
+                <MdOutlineClose onClick={closeModalVideo} className={estiloModalVideo.iconClose} />
+
+            </div>
+
+
+          
 
 
 
-            )
+     
 
 
-            
+
+    )
+
+
+
 
 
 }

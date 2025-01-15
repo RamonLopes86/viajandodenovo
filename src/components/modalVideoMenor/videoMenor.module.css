@@ -1,0 +1,45 @@
+.boxVideoMenor{
+
+    position: absolute;
+    width: 95%;
+    height: fit-content;
+    aspect-ratio:16/9;
+    max-width: 800px;
+    text-align: center;
+    left: 50%;
+    top: 500px;
+    transform: translate(-50% , -50%);
+    z-index: 10;
+    border-radius: 10px;
+    opacity: 1;
+    transition: all 200ms linear;
+    visibility: visible;
+}
+
+.iframeMenor{
+
+    
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+
+}
+
+
+.animaOn{
+
+    opacity: 1;
+    visibility: visible;
+}
+
+.animaOff{
+
+    opacity: 0;
+    visibility: hidden;
+}
