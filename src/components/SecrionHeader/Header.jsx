@@ -8,7 +8,6 @@ import MenuHam from '../menuHamHeader/manuHam';
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useEffect, useState } from 'react';
 import ModalVideo from '../modalVideo/modalVideo';
-import VideoMenor from '../modalVideoMenor/videoMenor';
 import { LuBaggageClaim } from "react-icons/lu";
 import { IoIosMail } from "react-icons/io";
 import { BiSolidPlaneAlt } from "react-icons/bi";
@@ -16,6 +15,7 @@ import { FaWhatsapp } from "react-icons/fa6";
 import { FaLocationDot } from "react-icons/fa6";
 import { RiLandscapeAiLine } from "react-icons/ri";
 import { MdPriceChange } from "react-icons/md";
+
 
 import Link from 'next/link';
 
@@ -142,7 +142,7 @@ export default function SectionHeader() {
 
             <ModalVideo />
 
-            <VideoMenor/>
+           
 
         </section>
 

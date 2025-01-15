@@ -9,6 +9,7 @@ import logo from '../../../public/logo.png'
 import { GiClick } from "react-icons/gi";
 import hookContext from '@/hookContext';
 import React , {useState , useRef , useEffect} from 'react';
+import VideoMenor from '../modalVideoMenor/videoMenor';
 
 
 export default function QuemSou() {
@@ -205,7 +206,7 @@ export default function QuemSou() {
             </section>
 
 
-
+                <VideoMenor/>
 
         </section>
 

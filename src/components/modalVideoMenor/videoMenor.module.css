@@ -1,20 +1,27 @@
+.boxPai{
+
+    padding: 40px;
+}
+
 .boxVideoMenor{
 
-    position: absolute;
+   
     width: 95%;
     height: fit-content;
     aspect-ratio:16/9;
     max-width: 800px;
+    margin: 0px auto;
     text-align: center;
-    left: 50%;
-    top: 500px;
-    transform: translate(-50% , -50%);
-    z-index: 10;
+    position: relative;
+    z-index: 1;
     border-radius: 10px;
     opacity: 1;
     transition: all 200ms linear;
     visibility: visible;
+    
+   
 }
+   
 
 .iframeMenor{
 
@@ -34,12 +41,10 @@
 
 .animaOn{
 
-    opacity: 1;
-    visibility: visible;
+    display: block;
 }
 
 .animaOff{
 
-    opacity: 0;
-    visibility: hidden;
+ display: none;
 }

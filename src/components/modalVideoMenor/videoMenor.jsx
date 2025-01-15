@@ -20,6 +20,9 @@ export default function VideoMenor(){
 
 
                 setOpenModalVideoMenor(false)
+            }else{
+
+                setOpenModalVideoMenor(true)
             }
 
         }
@@ -41,12 +44,12 @@ export default function VideoMenor(){
     return(
 
 
-        <section className={`${estiloVideoMenor.boxVideoMenor} ${openModalVideoMenor ? estiloVideoMenor.animaOn : estiloVideoMenor.animaOff }`}>
-
-
-                <iframe className={estiloVideoMenor.iframeMenor} src="https://www.youtube.com/embed/j1vAPFAPGjE?autoplay=1&playsI">
-                </iframe>
-
+        <section className={estiloVideoMenor.boxPai}>
+            
+            <section className={`${estiloVideoMenor.boxVideoMenor} ${openModalVideoMenor ? estiloVideoMenor.animaOn : estiloVideoMenor.animaOff }`}>
+                    <iframe className={estiloVideoMenor.iframeMenor} src="https://www.youtube.com/embed/j1vAPFAPGjE?autoplay=1&playsI">
+                    </iframe>
+            </section>
 
         </section>
     )
