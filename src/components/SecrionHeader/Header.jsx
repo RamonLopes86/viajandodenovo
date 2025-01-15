@@ -131,7 +131,9 @@ export default function SectionHeader(){
                         </ul>
                     </nav>
                     <button type="button">Falar com especialista <FaWhatsapp className={estiloHeader.imgWpp}/> </button>
+
                     <MenuHam/>
+                    
                     <ModalVideo/>
             
             </section>
