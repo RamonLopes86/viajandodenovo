@@ -12,6 +12,7 @@ import Localiza from "@/components/localizacao/localiza";
 import Pagamentos from "@/components/pagamentos/pagamentos";
 import Footer from "@/components/footer/footer";
 import BotaoWpp from "@/components/botaoWpp/botaoWpp";
+import Cotacao from "@/components/SectionCotacao/cotacao";
 
 
 export default function Home() {
@@ -33,11 +34,15 @@ export default function Home() {
 
         <Localiza/>
 
+        <Cotacao/>
+
         <Pagamentos/>
 
         <Footer/>
 
         <BotaoWpp/>
+        
+
 
       
     </div>

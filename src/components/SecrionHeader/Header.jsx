@@ -14,32 +14,33 @@ import { BiSolidPlaneAlt } from "react-icons/bi";
 import { FaWhatsapp } from "react-icons/fa6";
 import { FaLocationDot } from "react-icons/fa6";
 import { RiLandscapeAiLine } from "react-icons/ri";
+import { MdPriceChange } from "react-icons/md";
 import Link from 'next/link';
 
 
 
-export default function SectionHeader(){
+export default function SectionHeader() {
 
 
-  
 
-    const {setOpenNav} = hookContext()
 
-    const [animaHeader , setAnimaHeader] = useState(null)
+    const { setOpenNav } = hookContext()
+
+    const [animaHeader, setAnimaHeader] = useState(null)
 
 
     const styleLink = {
 
-        color:animaHeader ? 'var(--azul)' : null
+        color: animaHeader ? 'var(--azul)' : null
 
     }
 
 
-    function clickNavOpen(ev){
+    function clickNavOpen(ev) {
 
         ev.stopPropagation()
 
-        setOpenNav(atual=>!atual)
+        setOpenNav(atual => !atual)
 
         return;
 
@@ -47,101 +48,104 @@ export default function SectionHeader(){
     }
 
 
-    useEffect(()=>{
+    useEffect(() => {
 
-        const  headerAnimation = () =>{
+        const headerAnimation = () => {
 
 
-            if(window.scrollY > 0){
+            if (window.scrollY > 0) {
 
-              return  setAnimaHeader(true)
-               
-            }else{
+                return setAnimaHeader(true)
 
-               return setAnimaHeader(false)
+            } else {
+
+                return setAnimaHeader(false)
             }
 
 
         }
 
 
-        window.addEventListener('scroll' , headerAnimation)
+        window.addEventListener('scroll', headerAnimation)
 
 
 
-        
-        return()=>{
 
-            window.removeEventListener('scroll' , headerAnimation)
+        return () => {
+
+            window.removeEventListener('scroll', headerAnimation)
         }
 
-    },[])
+    }, [])
 
 
-    useEffect(()=>{
+    useEffect(() => {
 
 
-        const navOff = ()=>{
+        const navOff = () => {
 
-            window.innerWidth > 650 ?(setOpenNav(false)) : ( null)
+            window.innerWidth > 650 ? (setOpenNav(false)) : (null)
         }
 
-        window.addEventListener('resize' , navOff)
+        window.addEventListener('resize', navOff)
 
-        return()=>{
+        return () => {
 
-            window.removeEventListener('resize' , navOff)
+            window.removeEventListener('resize', navOff)
         }
 
-    },[])
+    }, [])
 
 
 
 
-   
-
-    return(
 
 
-     
+    return (
 
 
-            <section style={animaHeader ? {backgroundColor:'#E0FFFF' , transition:'all 500ms linear', height:'120px' , borderBottom:'2px solid var(--verde)'  } : null} className={`${estiloHeader.boxHeader}`}>
-                    <RxHamburgerMenu style={animaHeader ? null : {color:'white'}} onClick={clickNavOpen} className={estiloHeader.iconHam}/>
-            
-                        <Link href={'#idbanner'}>
-                            <Image className={estiloHeader.iconLogo} alt='logo da vijando de novo' src={logo}/>
-                        </Link>
-            
-                    <nav className={estiloHeader.navTelaMaior}>
-                        <ul style={{color: animaHeader ? 'var(--azul)' : null}}>
-                            <Link style={styleLink} className={estiloHeader.link} href={'#idquem'}>
-                                <li>Quem somos <LuBaggageClaim className={estiloHeader.imgNavMaior}/> </li>
-                            </Link>
-                            <Link style={styleLink} className={estiloHeader.link} href={'#idprodutos'}>
-                                <li>Produtos <BiSolidPlaneAlt className={estiloHeader.imgNavMaior}/> </li>
-                            </Link>
-            
-                            <Link style={styleLink} className={estiloHeader.link} href={'#idfotos'}>
-                            <li >Lugares  <RiLandscapeAiLine className={estiloHeader.imgNavMaior}/> </li>
-                            </Link>
-                            <Link style={styleLink} className={estiloHeader.link} href={'#idlocaliza'}>
-                                <li>Localização <FaLocationDot className={estiloHeader.imgNavMaior}/></li>
-                            </Link>
-                        </ul>
-                    </nav>
-                    <button  className={estiloHeader.btnNavMaior} type="button">Falar com especialista <FaWhatsapp className={estiloHeader.imgWpp}/> </button>
-
-                    <MenuHam/>
-                    
-                    <ModalVideo/>
-            
-            </section>
 
 
-        
-            
-      
+
+        <section style={animaHeader ? { backgroundColor: '#E0FFFF', transition: 'all 500ms linear', height: '120px', borderBottom: '2px solid var(--verde)' } : null} className={`${estiloHeader.boxHeader}`}>
+            <RxHamburgerMenu style={animaHeader ? null : { color: 'white' }} onClick={clickNavOpen} className={estiloHeader.iconHam} />
+
+            <Link href={'#idbanner'}>
+                <Image className={estiloHeader.iconLogo} alt='logo da vijando de novo' src={logo} />
+            </Link>
+
+            <nav className={estiloHeader.navTelaMaior}>
+                <ul style={{ color: animaHeader ? 'var(--azul)' : null }}>
+                    <Link style={styleLink} className={estiloHeader.link} href={'#idquem'}>
+                        <li>Quem somos <LuBaggageClaim className={estiloHeader.imgNavMaior} /> </li>
+                    </Link>
+                    <Link style={styleLink} className={estiloHeader.link} href={'#idprodutos'}>
+                        <li>Produtos <BiSolidPlaneAlt className={estiloHeader.imgNavMaior} /> </li>
+                    </Link>
+
+                    <Link style={styleLink} className={estiloHeader.link} href={'#idfotos'}>
+                        <li >Lugares  <RiLandscapeAiLine className={estiloHeader.imgNavMaior} /> </li>
+                    </Link>
+                    <Link style={styleLink} className={estiloHeader.link} href={'#idlocaliza'}>
+                        <li>Localização <FaLocationDot className={estiloHeader.imgNavMaior} /></li>
+                    </Link>
+                    <Link style={styleLink} className={estiloHeader.link} href={'#'}>
+                        <li>Cotação <MdPriceChange className={estiloHeader.imgNavMaior} /> </li>
+                    </Link>
+                </ul>
+            </nav>
+            <button className={estiloHeader.btnNavMaior} type="button">Falar com especialista <FaWhatsapp className={estiloHeader.imgWpp} /> </button>
+
+            <MenuHam />
+
+            <ModalVideo />
+
+        </section>
+
+
+
+
+
 
 
 

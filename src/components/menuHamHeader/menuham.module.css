@@ -141,6 +141,14 @@
     top: 20px;
 }
 
+.manuAnimaOff{
+
+    width: 0px;
+    transition: all 250ms linear;
+}
+
+
+
 
 @keyframes moveAviao {
 
@@ -157,8 +165,3 @@
 
 
 
-.manuAnimaOff{
-
-    width: 0px;
-    transition: all 250ms linear;
-}

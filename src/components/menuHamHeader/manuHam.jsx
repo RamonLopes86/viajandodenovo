@@ -8,7 +8,9 @@ import { LuBaggageClaim } from "react-icons/lu";
 import { FaLocationDot } from "react-icons/fa6";
 import { BiSolidPlaneAlt } from "react-icons/bi";
 import { RiLandscapeAiLine } from "react-icons/ri";
+import { MdPriceChange } from "react-icons/md";
 import Link from 'next/link';
+
 
 
 
@@ -54,6 +56,10 @@ export default function MenuHam() {
                     </Link>
                     <Link className={estiloManuHam.link} href={'#idlocaliza'}>
                         <li>Localização <FaLocationDot className={estiloManuHam.imgMenu} /></li>
+                    </Link>
+
+                    <Link href={'#'}>
+                        <li>Cotação <MdPriceChange className={estiloManuHam.imgMenu}/> </li>
                     </Link>
 
                 </ul>

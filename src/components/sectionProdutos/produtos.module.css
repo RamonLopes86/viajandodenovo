@@ -115,7 +115,7 @@ position: absolute;
 
 .animaOn{
 
-    transform: translateX(0);
+    
     opacity: 1;
     visibility: visible;
     transition: all 600ms linear;
