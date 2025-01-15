@@ -129,7 +129,7 @@ export default function SectionHeader() {
                     <Link style={styleLink} className={estiloHeader.link} href={'#idlocaliza'}>
                         <li>Localização <FaLocationDot className={estiloHeader.imgNavMaior} /></li>
                     </Link>
-                    <Link style={styleLink} className={estiloHeader.link} href={'#'}>
+                    <Link style={styleLink} className={estiloHeader.link} href={'#idcotacao'}>
                         <li>Cotação <MdPriceChange className={estiloHeader.imgNavMaior} /> </li>
                     </Link>
                 </ul>

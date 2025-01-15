@@ -159,6 +159,7 @@
     font-weight: 300;
     color: var(--azul);
     
+    
 
 }
 
@@ -167,7 +168,8 @@
 
 .boxTxEscondido{
 
-    display: none;
+    display: none
+
 }
 
 
@@ -289,7 +291,23 @@
     transition: none;
 
 }
+
+
+
+.animaTx2On{
+
+    transform: scale(1) translate(0);
+    opacity: 1;
+    transition: all 600ms linear;
     
+    
+}
+
+.animaTx2Off{
+    transform: scale(0) translateX(300px);
+    opacity: 0;
+    transition: none;
+}  
 
 
 
@@ -379,14 +397,18 @@
 
        .boxTxEscondido{
 
-         display: block;
+        display: block;
          max-width: 950px;
          margin: 0px auto;
          text-align: center;
          padding:20px;
+         
 
 
-       }
+        }
+
+       
+
 
        .boxTxEscondido h1 {
 

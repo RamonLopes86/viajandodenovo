@@ -6,7 +6,7 @@ export default function Cotacao(){
 
     return(
 
-        <section className={estiloCot.boxCotacao}>
+        <section id='idcotacao' className={estiloCot.boxCotacao}>
 
                 <h1>Cotação</h1>
 

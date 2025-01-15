@@ -41,24 +41,24 @@ export default function MenuHam() {
 
 
                 <ul>
-                    <Link href={'#idquem'}>
+                    <Link onClick={()=> setOpenNav(atual=> !atual)} href={'#idquem'}>
                         <li>Quem somos <BiSolidPlaneAlt className={estiloManuHam.imgMenu} /> </li>
                     </Link>
 
-                    <Link href={'#idproduto'}>
+                    <Link  onClick={()=> setOpenNav(atual=> !atual)} href={'#idproduto'}>
                         <li>Produtos <LuBaggageClaim className={estiloManuHam.imgMenu} />  </li>
                     </Link>
 
 
-                    <Link  className={estiloManuHam.link} href={'#idfotos'}>
+                    <Link  onClick={()=> setOpenNav(atual=> !atual)}  className={estiloManuHam.link} href={'#idfotos'}>
 
                         <li >Lugares  <RiLandscapeAiLine className={estiloManuHam.imgMenu} /> </li>
                     </Link>
-                    <Link className={estiloManuHam.link} href={'#idlocaliza'}>
+                    <Link  onClick={()=> setOpenNav(atual=> !atual)} className={estiloManuHam.link} href={'#idlocaliza'}>
                         <li>Localização <FaLocationDot className={estiloManuHam.imgMenu} /></li>
                     </Link>
 
-                    <Link href={'#'}>
+                    <Link  onClick={()=> setOpenNav(atual=> !atual)} href={'#idcotacao'}>
                         <li>Cotação <MdPriceChange className={estiloManuHam.imgMenu}/> </li>
                     </Link>
 

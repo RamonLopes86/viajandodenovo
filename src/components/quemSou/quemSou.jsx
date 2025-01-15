@@ -21,12 +21,14 @@ export default function QuemSou() {
     const [animaImg2 , setAnimaImg2] = useState(null)
     const [animaImg3 , setAnimaImg3] = useState(null)
     const [animaTx , setAnimaTx] = useState(null)
+    const [animaTx2 ,  setAnimaTx2] = useState(null)
 
 
     const refImg1 = useRef()
     const refImg2 = useRef()
     const refImg3 = useRef()
     const refTx = useRef()
+    const refTx2 = useRef()
 
 
 
@@ -87,6 +89,13 @@ export default function QuemSou() {
                         setAnimaTx(true)
                     }
 
+                    if(item.target === refTx2.current){
+
+                        setAnimaTx2(true)
+                        console.log('entrou')
+
+                    }
+
                }else{
 
 
@@ -111,6 +120,12 @@ export default function QuemSou() {
 
                     setAnimaTx(false)
                 }
+
+                
+                if(item.target === refTx2.current){
+
+                    setAnimaTx2(false)
+                }
                     
 
 
@@ -131,32 +146,16 @@ export default function QuemSou() {
         myObserver.observe(refImg2.current)
         myObserver.observe(refImg3.current)
         myObserver.observe(refTx.current)
+        myObserver.observe(refTx2.current)
 
 
 
         return ()=>{
 
-                if(refImg1){
-
-                    myObserver.unobserve(refImg1.current)
-                }
-
-                if(refImg2){
-
-                    myObserver.unobserve(refImg2.current)
-                }
-
-                if(refImg3){
-
-                    myObserver.unobserve(refImg3.current)
-                }
-                if(refTx){
-
-                    myObserver.unobserve(refTx.current)
-                }
+             myObserver.disconnect()
                 
 
-             return;
+            
 
         }
 
@@ -196,7 +195,7 @@ export default function QuemSou() {
             </section>
 
 
-            <section className={estiloQuem.boxTxEscondido}>
+            <section ref={refTx2} className={`${estiloQuem.boxTxEscondido} ${animaTx2 ? estiloQuem.animaTx2On : estiloQuem.animaTx2Off}`} >
 
                 <h1>Tiago Lopes.</h1>
                 <p>Muito prazer, sou CEO da viajando de novo e Já explorei mais de 50 países em cinco continentes, e cada viagem me ensinou que o mundo não é apenas um lugar para conhecer, mas para viver intensamente. Com a Viajando de Novo , minha missão é simples: fazer você viajar mais, gastar menos e transformar sonhos em memórias inesquecíveis. Falei um pouco  <span>sobre isso nesse Podcast  </span></p>

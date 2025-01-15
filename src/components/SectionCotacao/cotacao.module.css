@@ -1,6 +1,13 @@
 .boxCotacao{
 
     padding: 20px 10px;
+    background-image: url(../../../public/4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 20px;
+    border-radius: 20px;
+    filter: brightness(85%);
 }
 .boxCotacao > h1 {
 
@@ -9,5 +16,6 @@
     font-size: 4rem;
     color: var(--azul);
     text-transform: capitalize;
+    opacity: 0.9;
 
 }
