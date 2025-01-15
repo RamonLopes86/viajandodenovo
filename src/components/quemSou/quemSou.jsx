@@ -201,7 +201,7 @@ export default function QuemSou() {
                 <h1>Tiago Lopes.</h1>
                 <p>Muito prazer, sou CEO da viajando de novo e Já explorei mais de 50 países em cinco continentes, e cada viagem me ensinou que o mundo não é apenas um lugar para conhecer, mas para viver intensamente. Com a Viajando de Novo , minha missão é simples: fazer você viajar mais, gastar menos e transformar sonhos em memórias inesquecíveis. Falei um pouco  <span>sobre isso nesse Podcast  </span></p>
 
-                <button onClick={()=> setOpenModalVideoMenor(atual => !atual)}  type='button'>Clique para assistir <GiClick className={estiloQuem.iconMao} /></button>
+               
 
             </section>
 
