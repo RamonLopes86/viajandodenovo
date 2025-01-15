@@ -130,7 +130,7 @@ export default function SectionHeader(){
                             </Link>
                         </ul>
                     </nav>
-                    <button type="button">Falar com especialista <FaWhatsapp className={estiloHeader.imgWpp}/> </button>
+                    <button  className={estiloHeader.btnNavMaior} type="button">Falar com especialista <FaWhatsapp className={estiloHeader.imgWpp}/> </button>
 
                     <MenuHam/>
                     

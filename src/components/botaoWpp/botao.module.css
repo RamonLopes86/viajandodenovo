@@ -75,6 +75,7 @@
     bottom: 20px;
     right: 30px;
     display: inline-block;
+    cursor: pointer;
   }
 
   .boxBtn > p {

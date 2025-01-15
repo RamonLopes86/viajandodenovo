@@ -74,9 +74,9 @@ export default function Pagamentos(){
 
                 <div className={estiloPag.boxImagem}>
 
-                    <Image className={estiloPag.image} src={cad}/>
-                    <Image className={estiloPag.image} src={clod}/>
-                    <Image className={estiloPag.image} src={segure}/>
+                    <Image alt='icones' className={estiloPag.image} src={cad}/>
+                    <Image alt='icones' className={estiloPag.image} src={clod}/>
+                    <Image alt='icones' className={estiloPag.image} src={segure}/>
 
                 </div>
 

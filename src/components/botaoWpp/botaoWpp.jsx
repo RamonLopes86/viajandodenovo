@@ -10,7 +10,7 @@ export default function BotaoWpp(){
         <div className={estiloBotao.boxBtn}>
 
             <p>1</p>
-            <Image className={estiloBotao.imgWpp} src={wpp}/>
+            <Image alt='logo do whatsApp' className={estiloBotao.imgWpp} src={wpp}/>
         </div>
 
     )

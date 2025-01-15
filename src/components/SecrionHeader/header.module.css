@@ -90,7 +90,7 @@
     
 
 
-.boxHeader button {
+.boxHeader .btnNavMaior {
 
     border: none;
     padding: 10px;
@@ -126,7 +126,49 @@
 
 
 
+@media screen and (max-width:1100px) {
 
+
+
+    .boxHeader .btnNavMaior {
+
+        position: absolute;
+        right: 10px;
+        top: 130px;
+        width: 220px;
+        height: fit-content;
+        padding: 8px;
+        font-size: 0.9rem;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        border-radius: 8px;
+        box-shadow: 0px 0px 18px white;
+        
+
+
+        animation: btnPulse 1s linear infinite alternate;
+    
+    }
+
+
+    @keyframes btnPulse {
+
+        to{
+           
+            transform: translateY(10px);
+            transition: all 1s linear;
+        }
+    }
+
+
+    .imgWpp{
+
+        width: 25px;
+        height: fit-content;
+    }
+
+}
 
 @media screen and (max-width:890px) {
 
@@ -136,7 +178,7 @@
             
         }
 
-        .boxHeader > button{
+        .boxHeader > .btnNavMaior{
 
             display: none;
         }

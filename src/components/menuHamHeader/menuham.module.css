@@ -95,6 +95,10 @@
     font-size: 1.3rem;
     position: absolute;
     bottom: 100px;
+    border: none;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
   
 }
 

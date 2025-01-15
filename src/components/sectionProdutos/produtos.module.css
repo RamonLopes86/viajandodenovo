@@ -115,10 +115,13 @@ position: absolute;
 
 .animaOn{
 
-    
+    transform: translateX(0);
     opacity: 1;
     visibility: visible;
     transition: all 600ms linear;
+    transition-delay: 500ms;
+   
+    
 
 }
 
@@ -127,7 +130,7 @@ position: absolute;
 
 .animaOff{
 
-    transform: scale(0);
+    transform:translateX(-300px);
     visibility: hidden;
     opacity: 0;
     transition: none;
