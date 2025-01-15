@@ -40,6 +40,16 @@ export default function Banner() {
 
         myObserver.observe(boxRef.current)
 
+
+        return () => {
+
+            if(boxRef){
+
+                myObserver.unobserve(boxRef.current)
+            }
+
+        }
+
     },[])
 
 

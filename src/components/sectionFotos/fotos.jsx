@@ -1,3 +1,4 @@
+'use client'
 import estiloFoto from './fotos.module.css';
 import Image from 'next/image';
 import chile from '../../../public/chile.jpg'
@@ -7,6 +8,7 @@ import tailandia from '../../../public/tailandia.jpg'
 import montanha from '../../../public/montanha.jpg'
 import china from '../../../public/china.jpg'
 import bora from '../../../public/4.jpg'
+import React , {useState , useEffect , useRef} from 'react';
 
 
 
@@ -14,7 +16,64 @@ export default function Fotos(){
 
 const arrayImage = [chile , uruguai , paris , tailandia , montanha , china , bora]
 
+// const [anima , setAnima] = useState(Array.from({length:arrayImage.length} , (_,index)=> index = estiloFoto.animaOn))
 
+const [anima , setAnima] = useState(Array.from(arrayImage.map(()=> estiloFoto.animaOff)))
+
+const refImg = useRef([])
+
+
+
+
+useEffect(()=>{
+
+
+    const myObserver = new IntersectionObserver((elemento)=>{
+
+
+        elemento.forEach((el)=>{
+
+        
+               const index = refImg.current.indexOf(el.target)
+
+                if(index !== -1){
+
+                    setAnima(
+
+                        animaAtual=>{
+
+                            const animaArray = [...animaAtual]
+
+                            animaArray[index]  =  el.isIntersecting ? estiloFoto.animaOn : estiloFoto.animaOff
+
+                            return animaArray
+                        }
+                    )
+
+                }
+
+            
+
+
+          
+
+
+        })
+
+    })
+
+
+    refImg.current.forEach((ref)=> myObserver.observe(ref))
+
+
+
+  
+    return () =>{
+
+            return  myObserver.disconnect()
+    }
+
+},[])
     
 
 
@@ -34,7 +93,7 @@ const arrayImage = [chile , uruguai , paris , tailandia , montanha , china , bor
 
                         return(
 
-                            <Image key={index} className={estiloFoto.image} alt='imagens de paisagens' quality={100} src={image}/>
+                            <Image  key={index} ref={(el)=> refImg.current[index] = el} className={`${estiloFoto.image} ${anima[index]}`} alt='imagens de paisagens' quality={100} src={image}/>
 
                         )
 

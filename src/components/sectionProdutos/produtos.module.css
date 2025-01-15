@@ -37,11 +37,12 @@
     max-width: 1000px;
     margin: 0px auto;
     padding: 40px 20px;
-    
     z-index: 2;
-
+    
     
 }
+
+    
     
 
 
@@ -68,6 +69,7 @@
     box-shadow: 0px 0px 10px white;
     background-color: white;
     border-radius: 8px;
+
     
 }
 
@@ -111,23 +113,28 @@ position: absolute;
 
 /* intersection anima */
 
-
 .animaOn{
 
-    transform: translateY(0);
+    
     opacity: 1;
     visibility: visible;
     transition: all 600ms linear;
+
 }
+
+
+    
 
 .animaOff{
 
-    transform: translateY(100px);
+    transform: scale(0);
     visibility: hidden;
     opacity: 0;
     transition: none;
+    z-index: 2;
 
 }
+
 
 @keyframes moveImg {
 

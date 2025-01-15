@@ -136,10 +136,25 @@ export default function QuemSou() {
 
         return ()=>{
 
-             myObserver.unobserve(refImg1.current)
-             myObserver.unobserve(refImg1.current)
-             myObserver.observe(refImg3.current)
-             myObserver.observe(refTx.current)
+                if(refImg1){
+
+                    myObserver.unobserve(refImg1.current)
+                }
+
+                if(refImg2){
+
+                    myObserver.unobserve(refImg2.current)
+                }
+
+                if(refImg3){
+
+                    myObserver.unobserve(refImg3.current)
+                }
+                if(refTx){
+
+                    myObserver.unobserve(refTx.current)
+                }
+                
 
              return;
 

@@ -37,7 +37,10 @@ export default function Produtos() {
 
         return ()=>{
 
+         if(refProd){
+            
             myObserver.unobserve(refProd.current)
+         }
 
         }
 
