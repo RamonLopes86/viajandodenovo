@@ -151,6 +151,17 @@
 }
 
 
+
+@media screen and (max-width:600px) {
+
+        .boxBanner{
+
+            background-image: url(../../../public/4.jpg);
+        }
+
+}
+
+
 @media screen and (max-width:900px) {
 
         
