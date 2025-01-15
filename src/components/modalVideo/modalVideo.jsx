@@ -22,7 +22,7 @@ export default function ModalVideo(){
     const [animaThumb , setAnimaThumb] = useState(estiloModalVideo.imgFrenteOn)
 
 
-    function clodeModalVideo(){
+    function closeModalVideo(){
 
         setOpenModalVideo(
 
@@ -74,6 +74,7 @@ export default function ModalVideo(){
 
         
         return () => {
+
             document.body.removeChild(script);
         };
     }, []);
@@ -94,22 +95,30 @@ export default function ModalVideo(){
 
         return(
 
-            <div  className={`${estiloModalVideo.boxVideo} ${openModalVideo ? null : estiloModalVideo.animaVideoOff}`}>
-
-                      
-
-                <div ref={iframeRef} className={estiloModalVideo.iframe}>
-
-                </div>
+        
 
 
-                <Image onClick={togglePlayPause} alt='imagem de fundo' className={`${estiloModalVideo.imgFrente} ${animaThumb}`} src={thumb}/>
+                <section>
+
+                    <div  className={`${estiloModalVideo.boxVideo} ${openModalVideo ? null : estiloModalVideo.animaVideoOff}`}>
+                    
+                        <div ref={iframeRef} className={estiloModalVideo.iframe}>
+                        </div>
+                        <Image onClick={togglePlayPause} alt='imagem de fundo' className={`${estiloModalVideo.imgFrente} ${animaThumb}`} src={thumb}/>
+                        <MdOutlineClose onClick={closeModalVideo}  className={estiloModalVideo.iconClose}/>
+                    
+                    </div>
 
 
-                <MdOutlineClose onClick={clodeModalVideo}  className={estiloModalVideo.iconClose}/>
 
-           </div>
+                </section>
 
-        )
+
+
+            )
+
+
+            
+
 
 }
