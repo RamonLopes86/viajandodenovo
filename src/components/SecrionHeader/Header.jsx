@@ -30,6 +30,8 @@ export default function SectionHeader() {
 
     const [animaHeader, setAnimaHeader] = useState(null)
 
+    const [msg , setMsg] = useState('')
+
 
     const styleLink = {
 
@@ -100,6 +102,29 @@ export default function SectionHeader() {
 
 
 
+    useEffect(()=>{
+
+        const data = new Date()
+
+        const hora = data.getHours()
+
+        if(hora > 5 && hora <= 12){
+
+            
+             setMsg('bom dia')
+        }
+
+        if(hora > 12 && hora <= 18){
+
+            setMsg('boa tarde')
+        }
+
+        if(hora > 18 && hora <=5){
+            setMsg('boa noite')
+        }
+      
+
+    },[])
 
 
 
@@ -136,7 +161,9 @@ export default function SectionHeader() {
                     </Link>
                 </ul>
             </nav>
-            <button className={estiloHeader.btnNavMaior} type="button">Falar com especialista <FaWhatsapp className={estiloHeader.imgWpp} /> </button>
+            <Link href={`https://wa.me/5571981538307?text=ola , ${msg} , como posso te ajudar ?`} target='_blank'>
+                <button className={estiloHeader.btnNavMaior} type="button">Falar com especialista <FaWhatsapp className={estiloHeader.imgWpp} /> </button>
+            </Link>
 
             <MenuHam />
 
