@@ -12,6 +12,12 @@ export default function ContextProvaider({children}){
 
     const [openModalVideoMenor , setOpenModalVideoMenor] = useState(false)
 
+    const [openModalWpp , setOpenModalWpp] = useState(false)
+
+    const [msgWpp , setMsgWpp] = useState(false)
+    
+
+
  
     const refMenu = useRef()
 
@@ -31,8 +37,20 @@ export default function ContextProvaider({children}){
     }
         
 
-      
+    function clickModalWpp(param){
 
+        if(param === 'abrir'){
+
+           return setOpenModalWpp(true)
+
+        }
+
+        if(param === 'fechar'){
+
+            return setOpenModalWpp(false)
+        }
+
+    }
 
         
 
@@ -47,7 +65,11 @@ export default function ContextProvaider({children}){
         setOpenModalVideo,
         playerRef,
         openModalVideoMenor,
-        setOpenModalVideoMenor
+        setOpenModalVideoMenor,
+        openModalWpp,
+        setOpenModalWpp,
+        clickModalWpp
+        
        
     }
        

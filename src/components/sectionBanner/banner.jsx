@@ -4,6 +4,7 @@ import Image from 'next/image';
 import React, { useState, useEffect, useRef } from 'react';
 import plane from '../../../public/plane2.png'
 import logo from '../../../public/logo.png'
+import hookContext from '@/hookContext';
 
 
 export default function Banner() {
@@ -12,6 +13,8 @@ export default function Banner() {
     const boxRef = useRef()
 
     const [animaTit , setAnimaTit] = useState(false)
+
+    const {clickOpenMOdalWpp} = hookContext()
 
 
 

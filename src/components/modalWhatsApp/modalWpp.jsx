@@ -5,18 +5,23 @@ import logo from '../../../public/logo.png'
 import { IoIosClose } from "react-icons/io";
 import { IoMdSend } from "react-icons/io";
 import { IoCheckmarkDone } from "react-icons/io5";
-import React , {useState , useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
+import hookContext from '@/hookContext';
 
 
 
 
 export default function ModalWpp() {
 
-    const [hora , setHora] = useState(new Date().getHours())
-    const [min , setMin] = useState(new Date().getMinutes())
+    const [hora, setHora] = useState(new Date().getHours())
+    const [min, setMin] = useState(new Date().getMinutes())
+
+    const { openModalWpp , clickModalWpp } = hookContext()
+
+    
 
 
-    function attRelogio(){
+    function attRelogio() {
 
         const novoHorario = new Date()
 
@@ -27,27 +32,26 @@ export default function ModalWpp() {
 
 
 
-    
-    useEffect(()=>{
+    useEffect(() => {
 
-        
-        if(hora >=0 && hora <=9){
+
+        if (hora >= 0 && hora <= 9) {
 
             setHora(`0${hora}`)
-      
-          }
-      
-          if(min >=0 && min <=9){
-      
+
+        }
+
+        if (min >= 0 && min <= 9) {
+
             setMin(`0 ${min}`)
-      
-          }
-        
-       const intervalo =  setInterval(()=>{
+
+        }
+
+        const intervalo = setInterval(() => {
 
             attRelogio()
-    
-        },1000)
+
+        }, 1000)
 
 
 
@@ -55,9 +59,13 @@ export default function ModalWpp() {
 
             clearInterval(intervalo)
         }
-       
+
     })
-      
+
+
+
+
+
 
 
 
@@ -68,13 +76,13 @@ export default function ModalWpp() {
         <section className={estiloModalWpp.boxModalPai}>
 
 
-            <section className={estiloModalWpp.boxImagemFundo}>
+            <section className={`${estiloModalWpp.boxImagemFundo} ${openModalWpp ? estiloModalWpp.animaOn : estiloModalWpp.animaOff}`}>
 
                 <div className={estiloModalWpp.info}>
 
                     <div className={estiloModalWpp.boxImagem}>
 
-                        <Image className={estiloModalWpp.imgLogo} src={logo} />
+                        <Image alt='logo da viajando e novo' className={estiloModalWpp.imgLogo} src={logo} />
 
                         <div className={estiloModalWpp.onLine}></div>
                     </div>
@@ -87,7 +95,7 @@ export default function ModalWpp() {
                     </div>
 
 
-                    <IoIosClose className={estiloModalWpp.iconClose} />
+                    <IoIosClose onClick={() => clickModalWpp('fechar')} className={estiloModalWpp.iconClose} />
 
 
                 </div>
@@ -96,37 +104,41 @@ export default function ModalWpp() {
                 <section className={estiloModalWpp.boxInput}>
 
                     <input placeholder='Digite sua mensagem...' type="text" name="msg" id="idmsg" />
-                    
-                    <IoMdSend className={estiloModalWpp.iconSend}/>
+
+                    <IoMdSend className={estiloModalWpp.iconSend} />
                 </section>
 
-            </section>
 
 
+                <section className={estiloModalWpp.boxMsg}>
 
-            <section className={estiloModalWpp.boxMsg}>
+                    <p>Viajando de novo</p>
 
-                   <p>Viajando de novo</p>
-
-                   <p>Ola!</p>
-                   <p>Como podemos te ajudar ?</p>
+                    <p>Ola!</p>
+                    <p>Como podemos te ajudar ?</p>
 
                     <div className={estiloModalWpp.check}>
-                            <p className={estiloModalWpp.numeros}>{hora} : {min}</p>
-                            <IoCheckmarkDone className={estiloModalWpp.iconCheck}/>
+                        <p className={estiloModalWpp.numeros}>{hora} : {min}</p>
+                        <IoCheckmarkDone className={estiloModalWpp.iconCheck} />
                     </div>
 
 
+                </section>
+
+
+                <section className={estiloModalWpp.boxAnima}>
+
+                    <div className={estiloModalWpp.ball}></div>
+                    <div className={estiloModalWpp.ball}></div>
+                    <div className={estiloModalWpp.ball}></div>
+
+                </section>
+
+
             </section>
 
 
-            <section className={estiloModalWpp.boxAnima}>
 
-                    <div className={estiloModalWpp.ball}></div>
-                    <div className={estiloModalWpp.ball}></div>
-                    <div className={estiloModalWpp.ball}></div>
-
-            </section>
 
 
 
