@@ -45,7 +45,9 @@
     align-items: flex-start;
     gap: 10px;
    
-}   
+} 
+
+
 
 .boxFilho form div label{
 
@@ -81,6 +83,18 @@
     color: gray;
     border-radius: 8px;
     
+}
+
+.boxForm form div select{
+
+    width: 100%;
+    padding: 10px 5px;
+    border: none;
+    outline: none;
+    font-size: 1.3rem;
+    color: gray;
+    border-radius: 8px;
+
 }
 
 
