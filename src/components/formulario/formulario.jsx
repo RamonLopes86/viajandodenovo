@@ -1,7 +1,7 @@
 'use client'
 import estiloForm from './formulario.module.css';
-import React , {useEffect , useState} from 'react';
-import Link from 'next/link';
+import React , { useState} from 'react';
+
 
 
 export default function Formulario(){
@@ -9,8 +9,44 @@ export default function Formulario(){
     const [inputNome , setInputNome] = useState('')
     const [inputMail , setInputMail] = useState('')
     const [inputGasto , setInputGasto] = useState('')
+    const[inputNum , setInputNum] = useState('')
 
 
+    const handleWhatsAppClick = () => {
+
+        if(!inputNome || !inputMail || !inputNum){
+
+           return  alert('preencha os campos')
+        }
+
+        if(!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(inputMail)){
+
+           return  alert('email incorreto')
+
+        }
+
+        if(!/^(\(\d{2}\)\d{5}-\d{4}|\(\d{2}\)\d{4}-\d{4}|\d{11}|\d{8}-\d{4})$/.test(inputNum)){
+
+           return  alert ('telefone invalido')
+        }
+
+        if(!/^[A-Za-zÀ-ÿÁáÉéÍíÓóÚúÃãÕõÇç' -]+$/.test(inputNome)){
+
+           return  alert('nome invalido')
+        }
+
+
+        
+        const message = `Meu Nome: ${encodeURIComponent(inputNome)}%0AMeu E-mail: ${encodeURIComponent(inputMail)}%0AMeu número: ${encodeURIComponent(inputNum)}%0AMeu Gasto: ${encodeURIComponent(inputGasto)}%0Agostaria de uma cotação personalizada!!!`;
+        const url = `https://wa.me/5571981538307?text=${message}`;
+        window.open(url, '_blank');
+        setInputMail('')
+        setInputNome('')
+        setInputGasto('não opinar')
+        setInputNum('')
+
+      
+    };
 
 
 
@@ -32,6 +68,10 @@ export default function Formulario(){
                 <input value={inputMail} onChange={({target})=> setInputMail(target.value)} placeholder='digite seu email' autoComplete='off' type="text" name="mail" id="idmail" />
             </div>
             <div>
+                <label htmlFor="numero">Whatsapp</label>
+                <input value={inputNum} onChange={({target})=> setInputNum(target.value)} placeholder='(xx)9xxxx-xxxx' autoComplete='off' type="text" name="mail" id="idmail" />
+            </div>
+            <div>
                 <label htmlFor="idgasto">Gasto com cartão de crédito :</label>
 
                 <select value={inputGasto} onChange={({target})=> setInputGasto(target.value)} name="info" id="idgasto">
@@ -48,11 +88,11 @@ export default function Formulario(){
 
             <div>
                 
-                <Link  href={`https://wa.me/5571981538307?text=Meu%20Nome%20:%20${encodeURIComponent(inputNome)}%20&Meu%20E-mail%20:${encodeURIComponent(inputMail)}%20&Meu%20Gasto%20:${encodeURIComponent(inputGasto)}%20,%20gostaria%20de%20uma%20cotação%20personalizada`} target='_blank' >
+              
                 
-                    <button type="button">Falar com especialista</button>
+                    <button onClick={handleWhatsAppClick} type="button">Falar com especialista</button>
                 
-                </Link>
+                
 
             </div>
 

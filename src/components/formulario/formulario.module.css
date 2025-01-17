@@ -67,9 +67,17 @@
     font-size: 1.3rem;
     border-radius: 8px;
     box-shadow: 0px 0px 10px white;
+}
 
+.boxForm form div button:hover{
+
+    transition: all 500ms linear;
+    background-color: white;
+    color: var(--azul);
 
 }
+
+
 
 
 
@@ -88,7 +96,7 @@
 .boxForm form div select{
 
     width: 100%;
-    padding: 10px 5px;
+    padding: 9px 5px;
     border: none;
     outline: none;
     font-size: 1.3rem;
@@ -131,7 +139,7 @@
 
 
 
-@media screen and (max-width:420px) {
+@media screen and (max-width:500px) {
 
  .boxForm form div button {
 
