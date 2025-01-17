@@ -25,7 +25,6 @@ const refImg = useRef([])
 
 
 
-
 useEffect(()=>{
 
 
@@ -80,9 +79,9 @@ useEffect(()=>{
 
     return(
 
-        <section id='idfotos' className={estiloFoto.boxPai}>
+        <section  className={estiloFoto.boxPai}>
 
-            <h1>Lugares</h1>
+            <h1>Lugares <span id='idfotos'>...</span></h1>
 
             <h2>Uma bela experiência com conforto e segurança para você e sua família.</h2>
 

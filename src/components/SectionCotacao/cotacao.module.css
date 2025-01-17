@@ -1,6 +1,7 @@
 .boxCotacao{
 
-    padding: 20px 10px;
+    padding: 60px 10px;
+    min-height: 500px;
     background-image: url(../../../public/4.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -9,7 +10,7 @@
     border-radius: 20px;
     filter: brightness(85%);
 }
-.boxCotacao > h1 {
+.boxPai > h1 {
 
     text-align: center;
     padding: 20px 10px;
@@ -17,7 +18,16 @@
     color: var(--azul);
     text-transform: capitalize;
     opacity: 0.9;
+    position: relative;
 
+}
+
+
+.boxPai h1 > span{
+
+    position: absolute;
+    top: -100px;
+    visibility: hidden;
 }
 
 

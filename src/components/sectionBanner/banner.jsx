@@ -62,6 +62,8 @@ export default function Banner() {
 
         <section id='idbanner' className={estiloBanner.boxBanner}>
 
+                <p id='idquem' style={{position:'absolute' , right:'0', bottom:'100px', visibility:'hidden'}}></p>
+
 
             <div   className={`${estiloBanner.boxOverFlow} `}>
 

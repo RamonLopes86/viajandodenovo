@@ -134,7 +134,7 @@ export default function SectionHeader() {
 
 
 
-        <section style={animaHeader ? { backgroundColor: '#E0FFFF', transition: 'all 500ms linear', height: '120px', borderBottom: '2px solid var(--verde)' } : null} className={`${estiloHeader.boxHeader}`}>
+        <section style={animaHeader ? { backgroundColor: '#E0FFFF', transition: 'all 500ms linear', height: '120px', borderBottom: '2px solid var(--azul)' } : null} className={`${estiloHeader.boxHeader}`}>
             <RxHamburgerMenu style={animaHeader ? null : { color: 'white' }} onClick={clickNavOpen} className={estiloHeader.iconHam} />
 
             <Link href={'#idbanner'}>

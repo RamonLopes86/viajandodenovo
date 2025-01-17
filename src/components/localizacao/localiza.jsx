@@ -8,11 +8,11 @@ export default function Localiza() {
 
     return (
 
-        <section id='idlocaliza' className={estiloLocaliza.boxIframe}>
+        <section  className={estiloLocaliza.boxIframe}>
 
             
 
-            <h1>Onde estamos localizados</h1>
+            <h1>Onde estamos localizados <span id='idlocaliza'>...</span></h1>
 
             <section className={estiloLocaliza.boxFilho}>
 

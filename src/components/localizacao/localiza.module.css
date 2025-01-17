@@ -4,7 +4,7 @@
    background-repeat: no-repeat;
    background-size: cover;
     width: 100%;
-    min-height: 800px;
+    min-height: 900px;
    
 }
    
@@ -16,6 +16,14 @@
     color: white;
     text-align: center;
     color: var(--azul);
+    position: relative;
+}
+
+.boxIframe h1 > span{
+
+    position: absolute;
+    top: -90px;
+    visibility: hidden;
 }
 
 

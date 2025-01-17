@@ -4,15 +4,27 @@
     padding: 15px;
     backdrop-filter: blur(2px);
     border: 1px solid white;
-    box-shadow: 0px 0px 20px white ,  0px 0px 40px white;
+    
     border-radius: 10px;
     
     color:white;
     width: 100%;
+    max-width: 1500px;
+    margin: 0px auto;
     background-color:#1c57a5;
-  
     text-align: center;
+
+    animation: moveSombra 800ms linear infinite alternate;
+  
     
+}
+
+
+@keyframes moveSombra {
+
+    to{
+        box-shadow: 0px 0px 20px white ,  0px 0px 30px white;
+    }
 }
 
 
@@ -109,7 +121,7 @@
 
 
 
-@media screen and (max-width:1178px) {
+@media screen and (max-width:1418px) {
 
 
     .boxForm{

@@ -168,10 +168,10 @@ export default function QuemSou() {
 
     return (
 
-        <section  id='idquem'  className={estiloQuem.boxMaior}>
+        <section    className={estiloQuem.boxMaior}>
 
-
-
+                
+        
             <section className={estiloQuem.boxPai}>
 
 

@@ -14,7 +14,15 @@
     padding: 60px 10px;
     font-size: 4rem;
     color: white;
+    position: relative;
   
+}
+
+.boxPai h1 > span{
+
+    position: absolute;
+    top: -90px;
+    visibility: hidden;
 }
 
 .boxPai h2{

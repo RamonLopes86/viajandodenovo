@@ -45,9 +45,9 @@ export default function Produtos() {
 
     return (
 
-        <section id='idprodutos' className={estiloProd.boxProdutos}>
+        <section  className={estiloProd.boxProdutos}>
 
-            <h1>Produtos</h1>
+            <h1 >Produtos  <span id='idprodutos'>...</span></h1>
 
 
             <section ref={refProd} className={`${estiloProd.produtos} ${animaProd ? estiloProd.animaOn : estiloProd.animaOff}`}>
