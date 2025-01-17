@@ -5,7 +5,7 @@ import logo from '../../../public/logo.png'
 import { IoIosClose } from "react-icons/io";
 import { IoMdSend } from "react-icons/io";
 import { IoCheckmarkDone } from "react-icons/io5";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import hookContext from '@/hookContext';
 
 
@@ -16,9 +16,16 @@ export default function ModalWpp() {
     const [hora, setHora] = useState(new Date().getHours())
     const [min, setMin] = useState(new Date().getMinutes())
 
-    const { openModalWpp , clickModalWpp ,  msgWpp , setMsgWpp } = hookContext()
+    const { openModalWpp , clickModalWpp ,  msgWpp , refWpp  } = hookContext()
 
     
+    
+
+
+
+
+
+
 
 
     function attRelogio() {
@@ -34,18 +41,7 @@ export default function ModalWpp() {
 
     useEffect(() => {
 
-
-        if (hora >= 0 && hora <= 9) {
-
-            setHora(`0${hora}`)
-
-        }
-
-        if (min >= 0 && min <= 9) {
-
-            setMin(`0 ${min}`)
-
-        }
+        attRelogio()
 
         const intervalo = setInterval(() => {
 
@@ -60,9 +56,13 @@ export default function ModalWpp() {
             clearInterval(intervalo)
         }
 
-    })
 
+     
 
+    },[])
+
+    const horaFormatada = hora < 10 ? `0${hora}` : hora;
+    const minFormatado = min < 10 ? `0${min}` : min;
 
 
 
@@ -76,7 +76,7 @@ export default function ModalWpp() {
         <section className={estiloModalWpp.boxModalPai}>
 
 
-            <section className={`${estiloModalWpp.boxImagemFundo} ${openModalWpp ? estiloModalWpp.animaOn : estiloModalWpp.animaOff}`}>
+            <section ref={refWpp} className={`${estiloModalWpp.boxImagemFundo} ${openModalWpp ? estiloModalWpp.animaOn : estiloModalWpp.animaOff}`}>
 
                 <div className={estiloModalWpp.info}>
 
@@ -95,7 +95,7 @@ export default function ModalWpp() {
                     </div>
 
 
-                    <IoIosClose onClick={() => clickModalWpp('fechar')} className={estiloModalWpp.iconClose} />
+                    <IoIosClose onClick={(ev) => clickModalWpp('fechar' , ev)} className={estiloModalWpp.iconClose} />
 
 
                 </div>
@@ -120,7 +120,7 @@ export default function ModalWpp() {
                         <p>Como podemos te ajudar ?</p>
     
                         <div className={estiloModalWpp.check}>
-                            <p className={estiloModalWpp.numeros}>{hora} : {min}</p>
+                            <p className={estiloModalWpp.numeros}>{horaFormatada} : {minFormatado}</p>
                             <IoCheckmarkDone className={estiloModalWpp.iconCheck} />
                         </div>
     

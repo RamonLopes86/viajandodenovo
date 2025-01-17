@@ -161,7 +161,7 @@ export default function SectionHeader() {
                     </Link>
                 </ul>
             </nav>
-            <Link href={`https://wa.me/5571981538307?text=ola , ${msg} , como posso te ajudar ?`} target='_blank'>
+            <Link className={estiloHeader.linkBtn} href={`https://wa.me/5571981538307?text=ola , ${msg} , como posso te ajudar ?`} target='_blank'>
                 <button className={estiloHeader.btnNavMaior} type="button">Falar com especialista <FaWhatsapp className={estiloHeader.imgWpp} /> </button>
             </Link>
 

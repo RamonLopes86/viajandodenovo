@@ -15,14 +15,46 @@ export default function ContextProvaider({children}){
     const [openModalWpp , setOpenModalWpp] = useState(false)
 
     const [msgWpp , setMsgWpp] = useState(false)
+
+
+    const refWpp = useRef()
+    const refMenu = useRef()
+    const playerRef = useRef(null);
+    
+
+
+
+
+    useEffect(()=>{
+
+        const clickCloseModalWpp = ({target})=>{
+
+
+            if(refWpp.current && !refWpp.current.contains(target) ){
+
+                setOpenModalWpp(false)
+            }
+
+
+        }
+
+
+        window.addEventListener('click' , clickCloseModalWpp)
+
+
+
+        return ()=>{
+
+            window.removeEventListener('click' , clickCloseModalWpp)
+        }
+
+    },[])
     
 
 
  
-    const refMenu = useRef()
 
 
-     const playerRef = useRef(null);
 
     
     function clickHiddenMenu({target}){
@@ -30,18 +62,22 @@ export default function ContextProvaider({children}){
 
         if(refMenu.current && !refMenu.current.contains(target)){
 
-            setOpenNav(false)
+             setOpenNav(false)
         }
 
 
     }
         
 
-    function clickModalWpp(param){
+    function clickModalWpp(param , ev ){
+
+        ev.stopPropagation()
 
         if(param === 'abrir'){
 
+           
             setOpenModalWpp(true)
+          
 
              setTimeout(()=>{
 
@@ -59,8 +95,10 @@ export default function ContextProvaider({children}){
 
         if(param === 'fechar'){
 
+            
              setOpenModalWpp(false)
              setMsgWpp(false)
+            
              return;
             
         }
@@ -92,7 +130,8 @@ export default function ContextProvaider({children}){
         setOpenModalWpp,
         clickModalWpp,
         msgWpp,
-        setMsgWpp
+        setMsgWpp,
+        refWpp
         
        
     }

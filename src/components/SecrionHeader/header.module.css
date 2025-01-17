@@ -194,6 +194,14 @@
             transition: all 500ms linear;
         }
 
+
+        .boxHeader > .linkBtn {
+
+            display: none;
+        }
+
+
+
 }
 
 

@@ -91,6 +91,7 @@
     width: 40px;
     height: fit-content;
     cursor: pointer;
+    flex: none;
 }
 
 .iconSend{
@@ -262,15 +263,15 @@
 
         .boxImagemFundo{
 
-            width: 300px;
-
-            left: -290px;
+            width: 320px;
+            
+            left: -245px;
         }
 
 
         .animaOn{
 
-            width: 300px;
+            width: 320px;
             height: 350px;
             transition: all 200ms linear;
         
@@ -293,9 +294,49 @@
 
     .boxImagemFundo{
 
+        width: 320px;
+
+        left: -245px;
+    }
+
+
+    .animaOn{
+
+        width: 320px;
+        height: 350px;
+        transition: all 200ms linear;
+    
+    }
+
+    .animaOff{
+
+        width: 0;
+        height: 0;
+        transition: all 200ms linear;
+    
+    }
+
+}
+
+
+@media screen and (max-width:350px) {
+
+
+    .boxImagemFundo{
+
         width: 300px;
 
-        left: -230px;
+        left: -225px;
+    }
+
+    .boxImagemFundo .boxNome  p:nth-of-type(1) {
+
+        font-size: 0.9rem;
+    }
+
+   .boxImagemFundo .boxNome  p:nth-of-type(2) {
+
+        font-size: 0.7rem;
     }
 
 
@@ -316,6 +357,7 @@
     }
 
 }
+
 
 
 

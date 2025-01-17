@@ -17,7 +17,7 @@ export default function BotaoWpp(){
             <ModalWpp/>
 
             <p>1</p>
-            <Image onClick={()=>clickModalWpp('abrir')} alt='logo do whatsApp' className={estiloBotao.imgWpp} src={wpp}/>
+            <Image onClick={(ev)=>clickModalWpp('abrir' , ev)} alt='logo do whatsApp' className={estiloBotao.imgWpp} src={wpp}/>
         </div>
 
     )
