@@ -12,9 +12,10 @@ import React , {useState , useEffect , useRef} from 'react';
 
 
 
+
 export default function Fotos(){
 
-const arrayImage = [chile , uruguai , paris , tailandia , montanha , china , bora]
+const arrayImage = [chile , uruguai , paris , tailandia , montanha , china , bora ]
 
 // const [anima , setAnima] = useState(Array.from({length:arrayImage.length} , (_,index)=> index = estiloFoto.animaOn))
 

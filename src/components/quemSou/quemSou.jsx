@@ -2,14 +2,14 @@
 import estiloQuem from './quemsou.module.css';
 import Image from 'next/image';
 import tiago from '../../../public/tiago.jpg'
-import tiago2 from '../../../public/tiago2.jpg'
+import tiago2 from '../../../public/image1.jpeg'
 import tiago3 from '../../../public/tiago3.jpg'
-import tiago4 from '../../../public/tiago4.jpg'
-import logo from '../../../public/logo.png'
+
 import { GiClick } from "react-icons/gi";
 import hookContext from '@/hookContext';
 import React , {useState , useRef , useEffect} from 'react';
 import VideoMenor from '../modalVideoMenor/videoMenor';
+
 
 
 export default function QuemSou() {
@@ -181,7 +181,7 @@ export default function QuemSou() {
                     <Image ref={refImg3} alt='imagem de tiago lopes do viajando de novo' quality={100} className={`${estiloQuem.image} ${animaImg3 ? estiloQuem.animaPriOn : estiloQuem.animaPriOff}`} src={tiago3} />
                 </section>
                 <section className={estiloQuem.boxRight}>
-                    <Image alt='imagem de tiago lopes do viajando de novo' quality={100} className={estiloQuem.image} src={tiago4} />
+
                     <div ref={refTx} className={`${estiloQuem.boxTx} ${animaTx ? estiloQuem.animaTxOn : estiloQuem.animaTxOff}`}>
                         <h1>Tiago Lopes.</h1>
                         <p>Muito prazer, sou CEO da viajando de novo e Já explorei mais de 50 países em cinco continentes, e cada viagem me ensinou que o mundo não é apenas um lugar para conhecer, mas para viver intensamente. Com a Viajando de Novo , minha missão é simples: fazer você viajar mais, gastar menos e transformar sonhos em memórias inesquecíveis. Falei um pouco  <span>sobre isso nesse Podcast  </span></p>
