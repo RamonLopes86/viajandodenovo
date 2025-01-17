@@ -285,11 +285,22 @@
         
         }
 
-        .iconClose{
+        .boxImagemFundo  .info  .iconClose{
 
             width: 50px;
-            height: fit-content;
+            height: 50px;
             
+        }
+
+      .boxImagemFundo .boxInput .iconSend{
+
+            width: 40px;
+            height: 40px;
+        }
+
+        .boxImagemFundo .boxMsg{
+
+            min-height: 115px;
         }
 
 }

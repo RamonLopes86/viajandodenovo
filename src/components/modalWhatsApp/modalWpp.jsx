@@ -112,9 +112,8 @@ export default function ModalWpp() {
 
                     <input autoComplete='off' value={inputTx} onChange={({target})=> setInputTx(target.value)} placeholder='Digite sua mensagem...' type="text" name="msg" id="idmsg" />
 
-                    
-
-                        <IoMdSend onClick={inputTx.length === 0 ? null : sendWpp} className={estiloModalWpp.iconSend} />
+                
+                    <IoMdSend style={inputTx.length === 0 ? {opacity:'0.6' , cursor:'auto'} : {opacity:'1'}} onClick={inputTx.length === 0 ? null : sendWpp} className={estiloModalWpp.iconSend} />
                    
                 </section>
 
