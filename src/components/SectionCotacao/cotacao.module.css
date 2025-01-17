@@ -19,3 +19,13 @@
     opacity: 0.9;
 
 }
+
+
+@media screen and (max-width:420px) {
+
+    .boxCotacao h1 {
+
+        font-size: 13vw;
+    }
+
+}

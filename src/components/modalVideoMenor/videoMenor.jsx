@@ -1,7 +1,8 @@
 'use client'
 import hookContext from '@/hookContext';
 import estiloVideoMenor from './videoMenor.module.css';
-import { useEffect } from 'react';
+import React , {useState , useEffect } from 'react';
+
 
 
 
@@ -9,6 +10,8 @@ import { useEffect } from 'react';
 export default function VideoMenor(){
 
     const {openModalVideoMenor , setOpenModalVideoMenor} = hookContext()
+
+    const [caminho , setCaminho] = useState("https://www.youtube.com/embed/j1vAPFAPGjE?autoplay=1&playsI")
 
 
     useEffect(()=>{
@@ -18,11 +21,14 @@ export default function VideoMenor(){
 
             if(window.innerWidth > 1205){
 
-
                 setOpenModalVideoMenor(false)
+              
+           
+               
+            
             }else{
 
-                setOpenModalVideoMenor(true)
+                  setOpenModalVideoMenor(true)
             }
 
         }
@@ -38,6 +44,35 @@ export default function VideoMenor(){
 
         }
 
+    }, [])
+
+
+    useEffect (()=>{
+
+        const pauseVideo = () =>{
+
+            if(window.innerWidth > 1205){
+
+                return setCaminho(null)
+            }else{
+
+                setCaminho(caminho)
+            }
+
+        }
+
+
+
+        window.addEventListener('resize' , pauseVideo)
+
+
+
+        return ()=>{
+
+            window.removeEventListener('resize' , pauseVideo)
+        }
+
+
     },[])
 
 
@@ -47,7 +82,7 @@ export default function VideoMenor(){
         <section className={estiloVideoMenor.boxPai}>
             
             <section className={`${estiloVideoMenor.boxVideoMenor} ${openModalVideoMenor ? estiloVideoMenor.animaOn : estiloVideoMenor.animaOff }`}>
-                    <iframe className={estiloVideoMenor.iframeMenor} src="https://www.youtube.com/embed/j1vAPFAPGjE?autoplay=1&playsI">
+                    <iframe className={estiloVideoMenor.iframeMenor} src={caminho}>
                     </iframe>
             </section>
 

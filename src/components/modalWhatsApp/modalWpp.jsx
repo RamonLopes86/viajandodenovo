@@ -16,7 +16,7 @@ export default function ModalWpp() {
     const [hora, setHora] = useState(new Date().getHours())
     const [min, setMin] = useState(new Date().getMinutes())
 
-    const { openModalWpp , clickModalWpp } = hookContext()
+    const { openModalWpp , clickModalWpp ,  msgWpp , setMsgWpp } = hookContext()
 
     
 
@@ -108,31 +108,44 @@ export default function ModalWpp() {
                     <IoMdSend className={estiloModalWpp.iconSend} />
                 </section>
 
+                {
 
+                    msgWpp ? (
 
-                <section className={estiloModalWpp.boxMsg}>
+                        <section className={estiloModalWpp.boxMsg}>
 
-                    <p>Viajando de novo</p>
+                        <p>Viajando de novo</p>
+    
+                        <p>Olá! ✈️</p>
+                        <p>Como podemos te ajudar ?</p>
+    
+                        <div className={estiloModalWpp.check}>
+                            <p className={estiloModalWpp.numeros}>{hora} : {min}</p>
+                            <IoCheckmarkDone className={estiloModalWpp.iconCheck} />
+                        </div>
+    
+    
+                    </section>
 
-                    <p>Ola!</p>
-                    <p>Como podemos te ajudar ?</p>
+                    ):(
 
-                    <div className={estiloModalWpp.check}>
-                        <p className={estiloModalWpp.numeros}>{hora} : {min}</p>
-                        <IoCheckmarkDone className={estiloModalWpp.iconCheck} />
-                    </div>
-
-
-                </section>
-
-
-                <section className={estiloModalWpp.boxAnima}>
+                        
+                    <section className={estiloModalWpp.boxAnima}>
 
                     <div className={estiloModalWpp.ball}></div>
                     <div className={estiloModalWpp.ball}></div>
                     <div className={estiloModalWpp.ball}></div>
 
                 </section>
+
+
+                    )
+
+
+                }
+
+              
+
 
 
             </section>

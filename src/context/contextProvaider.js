@@ -41,16 +41,38 @@ export default function ContextProvaider({children}){
 
         if(param === 'abrir'){
 
-           return setOpenModalWpp(true)
+            setOpenModalWpp(true)
+
+             setTimeout(()=>{
+
+                setMsgWpp(true)
+
+            },1000)
+
+
+            
+
+
+            return;
 
         }
 
         if(param === 'fechar'){
 
-            return setOpenModalWpp(false)
+             setOpenModalWpp(false)
+             setMsgWpp(false)
+             return;
+            
         }
 
     }
+
+
+
+
+
+       
+
 
         
 
@@ -68,7 +90,9 @@ export default function ContextProvaider({children}){
         setOpenModalVideoMenor,
         openModalWpp,
         setOpenModalWpp,
-        clickModalWpp
+        clickModalWpp,
+        msgWpp,
+        setMsgWpp
         
        
     }
