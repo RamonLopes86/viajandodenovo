@@ -22,6 +22,17 @@ export default function ModalWpp() {
     const [inputTx , setInputTx] = useState('')
     
 
+    function sendWpp(){
+
+        const url = `https://wa.me/5571981538307?text=${inputTx}`
+
+        window.open(url , '_blank')
+
+    }
+
+
+    
+
 
 
     function attRelogio() {
@@ -64,7 +75,7 @@ export default function ModalWpp() {
 
 
 
-
+   
 
 
     return (
@@ -101,10 +112,10 @@ export default function ModalWpp() {
 
                     <input autoComplete='off' value={inputTx} onChange={({target})=> setInputTx(target.value)} placeholder='Digite sua mensagem...' type="text" name="msg" id="idmsg" />
 
-                    <Link href={`https://wa.me/5571981538307?text=${inputTx}`} >
+                    
 
-                        <IoMdSend className={estiloModalWpp.iconSend} />
-                    </Link>
+                        <IoMdSend onClick={inputTx.length === 0 ? null : sendWpp} className={estiloModalWpp.iconSend} />
+                   
                 </section>
 
                 {

@@ -16,6 +16,10 @@ export default function ContextProvaider({children}){
 
     const [msgWpp , setMsgWpp] = useState(false)
 
+    const [msgAlert , setMsgAlert] = useState('')
+
+    const [animaAlert , setAnimaAlert] = useState(false)
+
 
     const refWpp = useRef()
     const refMenu = useRef()
@@ -131,7 +135,11 @@ export default function ContextProvaider({children}){
         clickModalWpp,
         msgWpp,
         setMsgWpp,
-        refWpp
+        refWpp,
+        msgAlert,
+        setMsgAlert,
+        animaAlert,
+        setAnimaAlert
         
        
     }
