@@ -7,6 +7,7 @@ import { IoMdSend } from "react-icons/io";
 import { IoCheckmarkDone } from "react-icons/io5";
 import React, { useState, useEffect, useRef } from 'react';
 import hookContext from '@/hookContext';
+import Link from 'next/link';
 
 
 
@@ -18,24 +19,19 @@ export default function ModalWpp() {
 
     const { openModalWpp , clickModalWpp ,  msgWpp , refWpp  } = hookContext()
 
+    const [inputTx , setInputTx] = useState('')
     
-    
-
-
-
-
-
 
 
 
     function attRelogio() {
 
         const novoHorario = new Date()
-
         setHora(novoHorario.getHours())
         setMin(novoHorario.getMinutes())
 
     }
+
 
 
 
@@ -103,9 +99,12 @@ export default function ModalWpp() {
 
                 <section className={estiloModalWpp.boxInput}>
 
-                    <input placeholder='Digite sua mensagem...' type="text" name="msg" id="idmsg" />
+                    <input autoComplete='off' value={inputTx} onChange={({target})=> setInputTx(target.value)} placeholder='Digite sua mensagem...' type="text" name="msg" id="idmsg" />
 
-                    <IoMdSend className={estiloModalWpp.iconSend} />
+                    <Link href={`https://wa.me/5571981538307?text=${inputTx}`} >
+
+                        <IoMdSend className={estiloModalWpp.iconSend} />
+                    </Link>
                 </section>
 
                 {
