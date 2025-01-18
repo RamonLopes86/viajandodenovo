@@ -71,7 +71,7 @@ export default function MenuHam() {
                         <li>Quem somos <BiSolidPlaneAlt className={estiloManuHam.imgMenu} /> </li>
                     </Link>
 
-                    <Link onClick={() => setOpenNav(atual => !atual)} href={'#idproduto'}>
+                    <Link onClick={() => setOpenNav(atual => !atual)} href={'#idprodutos'}>
                         <li>Produtos <LuBaggageClaim className={estiloManuHam.imgMenu} />  </li>
                     </Link>
 
