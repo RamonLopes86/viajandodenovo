@@ -1,6 +1,7 @@
 .boxPai{
 
     padding: 40px;
+    position: relative;
 }
 
 .boxVideoMenor{
@@ -47,6 +48,30 @@
 .animaOff{
 
  display: none;
+}
+
+
+.iconFlecha{
+
+    color: white;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 40px;
+    height: 50px;
+
+    animation: moveFlexa 1s linear infinite alternate;
+}
+
+
+@keyframes moveFlexa{
+
+    to{
+
+        transform: translate(-50% , -8px);
+    }
+
 }
 
 

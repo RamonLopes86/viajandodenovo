@@ -2,6 +2,7 @@
 import hookContext from '@/hookContext';
 import estiloVideoMenor from './videoMenor.module.css';
 import React , {useState , useEffect } from 'react';
+import { LuCircleArrowDown } from "react-icons/lu";
 
 
 
@@ -85,6 +86,8 @@ export default function VideoMenor(){
                     <iframe className={estiloVideoMenor.iframeMenor} src={caminho}>
                     </iframe>
             </section>
+
+            <LuCircleArrowDown style={window.innerWidth <= 1205 ? {display:'block'}: {display:'none'}} className={estiloVideoMenor.iconFlecha}/>
 
         </section>
     )
