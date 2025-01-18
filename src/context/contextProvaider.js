@@ -37,6 +37,7 @@ export default function ContextProvaider({children}){
             if(refWpp.current && !refWpp.current.contains(target) ){
 
                 setOpenModalWpp(false)
+               
             }
 
 
@@ -67,9 +68,15 @@ export default function ContextProvaider({children}){
         if(refMenu.current && !refMenu.current.contains(target)){
 
              setOpenNav(false)
+             setMsgWpp(false)
+
+             return;
+
+
+             
         }
 
-
+     
     }
         
 
