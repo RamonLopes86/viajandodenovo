@@ -33,13 +33,20 @@ export default function ContextProvaider({children}){
 
         const clickCloseModalWpp = ({target})=>{
 
-
+            
             if(refWpp.current && !refWpp.current.contains(target) ){
 
                 setOpenModalWpp(false)
+                setMsgWpp(false)
                
+            }else{
+
+                setMsgWpp(true)
             }
 
+
+            
+       
 
         }
 
@@ -82,7 +89,9 @@ export default function ContextProvaider({children}){
 
     function clickModalWpp(param , ev ){
 
-        ev.stopPropagation()
+        if (ev && ev.stopPropagation) {
+            ev.stopPropagation();
+        }
 
         if(param === 'abrir'){
 
