@@ -80,7 +80,9 @@
 .imgLogo{
 
     width: 60px;
-    height: 60px;
+    height:60px;
+    object-fit: contain;
+
     background-color: white;
     clip-path: circle();
     padding:5px;

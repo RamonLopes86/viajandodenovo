@@ -74,13 +74,12 @@ export default function ModalWpp() {
 
 
 
-
    
 
 
     return (
 
-        <section className={estiloModalWpp.boxModalPai}>
+        <section onClick={clickModalWpp} className={estiloModalWpp.boxModalPai}>
 
 
             <section ref={refWpp} className={`${estiloModalWpp.boxImagemFundo} ${openModalWpp ? estiloModalWpp.animaOn : estiloModalWpp.animaOff}`}>
@@ -108,7 +107,7 @@ export default function ModalWpp() {
                 </div>
 
 
-                <section className={estiloModalWpp.boxInput}>
+                <section  className={estiloModalWpp.boxInput}>
 
                     <input autoComplete='off' value={inputTx} onChange={({target})=> setInputTx(target.value)} placeholder='Digite sua mensagem...' type="text" name="msg" id="idmsg" />
 

@@ -1,6 +1,7 @@
 import estiloFooter from './footer.module.css'
 
 
+
 export default function Footer(){
 
     const data = new Date
@@ -12,8 +13,10 @@ export default function Footer(){
 
 
         <section className={estiloFooter.footer}>
-
-                <p><span> {ano}</span> Desenvolvido por Ramon Lopes <span>&copy;</span> </p>
+                <p>Santos - São Paulo - Brasil</p>
+                <p>CNPJ - 57.767.163/0001-11</p>
+                <p><span> {ano}</span> - Viajando de Novo &reg; | Todos os direitos reservados <span>&copy;</span> </p>
+                <p>Desenvolvido por Ramon Lopes</p>
         </section>
     )
 }

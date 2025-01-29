@@ -7,7 +7,7 @@ export default function RootLayout({ children }) {
     <html lang="pt-br">
       <head>
         <title> Viajando de Novo</title>
-        <link rel='icon' href="/logo.png" />
+        <link rel='icon' href="/iconPlane.png"/>
       </head>
 
       <ContextProvaider>
